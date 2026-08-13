@@ -59,6 +59,12 @@ Die Übersetzungen sind sprachlich vollständig, aber noch nicht veröffentlichu
 
 Die konkreten Arbeitspakete werden als GitHub Issues geführt. `TARGET_REVIEW` bedeutet: Übersetzung vorhanden, Veröffentlichung erst nach der jeweils genannten Freigabe.
 
+## Projektsteuerung
+
+- [Release-Tracking-Issue](https://github.com/Thitronik01/SmartDock-Webseite-bersetzung-/issues/10)
+- [Milestone „Localization Release 1.0“](https://github.com/Thitronik01/SmartDock-Webseite-bersetzung-/milestone/1)
+- [Offener Issue-Backlog](https://github.com/Thitronik01/SmartDock-Webseite-bersetzung-/issues)
+
 ## Repository-Struktur
 
 ```text
