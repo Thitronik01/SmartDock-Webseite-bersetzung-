@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+
+# PocketBase runtime state and executable
+apps/pocketbase/pb_data/
+apps/pocketbase/pocketbase
+*.db
+*.db-shm
+*.db-wal
+
+# Documents explicitly excluded from the website-localization scope
+*.pdf
+*.pdf.attrs
+
+# Logs, caches and editor/OS state
+*.log
+.cache/
+.temp/
+.tmp/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,63 @@
+name: Lokalisierungsaufgabe
+description: Abgegrenzte Übersetzungs-, Review-, Implementierungs- oder QA-Arbeit erfassen
+title: "[Localization] "
+labels:
+  - localization
+body:
+  - type: dropdown
+    id: workstream
+    attributes:
+      label: Arbeitsstrom
+      options:
+        - Übersetzung
+        - Fachliche oder rechtliche Freigabe
+        - Implementierung
+        - Dynamische Inhalte / PocketBase
+        - Grafikproduktion
+        - SEO / Barrierefreiheit
+        - Sprachliche oder visuelle QA
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem und Kontext
+      description: Betroffene Route, Komponente, Datensätze und Translation IDs nennen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Umfang
+      description: Festhalten, was ausdrücklich enthalten und ausgeschlossen ist.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Abnahmekriterien
+      placeholder: |
+        - [ ] Kriterium 1
+        - [ ] Kriterium 2
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: review
+    attributes:
+      label: Erforderliche Prüfungen
+      options:
+        - label: Rechtliche Prüfung
+        - label: Technische oder sicherheitsbezogene Prüfung
+        - label: Marken- oder Marketingfreigabe
+        - label: Native Sprachprüfung
+        - label: Visuelle und funktionale Prüfung
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Referenzen
+      description: Auf das Lokalisierungspaket, konkrete IDs, Screenshots oder weitere Issues verlinken.
