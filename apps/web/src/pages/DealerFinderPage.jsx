@@ -337,7 +337,7 @@ const DealerFinderPage = () => {
         <div className="flex flex-col md:flex-row gap-6 flex-grow min-h-[800px]">
           <div className={`flex-1 flex flex-col h-[800px] bg-card border border-border rounded-2xl overflow-hidden ${activeTab === 'map' ? 'hidden md:flex' : 'flex'}`}>
             <div className="p-4 border-b border-border bg-muted/30">
-              <h3 className="font-semibold flex items-center"><Search className="w-4 h-4 mr-2 text-primary" /> {loading ? '...' : filteredDealers.length} {t('df_found')}</h3>
+              <h3 className="font-semibold flex items-center"><Search className="w-4 h-4 mr-2 text-primary" /> {loading ? '...' : filteredDealers.length} {t('df_found', { count: filteredDealers.length })}</h3>
             </div>
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {loading ? (

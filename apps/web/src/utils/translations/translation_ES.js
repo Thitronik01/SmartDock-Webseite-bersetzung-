@@ -237,7 +237,9 @@ export const translation_ES = {
   df_gps: "[ES] Meinen Standort nutzen",
   df_list: "[ES] Liste",
   df_map: "[ES] Karte",
-  df_found: "[ES] Händler gefunden",
+  df_found: "distribuidores encontrados",
+  df_found_one: "distribuidor encontrado",
+  df_found_other: "distribuidores encontrados",
   df_visit: "[ES] Website besuchen",
   df_empty: "[ES] Keine Händler für diese Kriterien gefunden.",
 

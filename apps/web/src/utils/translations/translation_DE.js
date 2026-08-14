@@ -320,6 +320,8 @@ export const translation_DE = {
   df_list: "Liste",
   df_map: "Karte",
   df_found: "Händler gefunden",
+  df_found_one: "Händler gefunden",
+  df_found_other: "Händler gefunden",
   df_visit: "Website besuchen",
   df_empty: "Keine Händler für diese Kriterien gefunden. Bitte erweitere deine Suche.",
   df_other_dealers: "Weitere Händler (ohne Kartenposition)",

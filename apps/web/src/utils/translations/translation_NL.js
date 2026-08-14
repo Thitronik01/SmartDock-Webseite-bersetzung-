@@ -238,7 +238,9 @@ export const translation_NL = {
   df_gps: "[NL] Meinen Standort nutzen",
   df_list: "[NL] Liste",
   df_map: "[NL] Karte",
-  df_found: "[NL] Händler gefunden",
+  df_found: "dealers gevonden",
+  df_found_one: "dealer gevonden",
+  df_found_other: "dealers gevonden",
   df_visit: "[NL] Website besuchen",
   df_empty: "[NL] Keine Händler für diese Kriterien gefunden.",
 

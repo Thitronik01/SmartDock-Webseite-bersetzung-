@@ -299,6 +299,8 @@ export const translation_EN = {
   df_list: "List",
   df_map: "Map",
   df_found: "Dealers found",
+  df_found_one: "Dealer found",
+  df_found_other: "Dealers found",
   df_visit: "Visit Website",
   df_empty: "No dealers found for these criteria. Please broaden your search.",
   df_other_dealers: "Other dealers (no map position)",

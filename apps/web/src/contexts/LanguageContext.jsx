@@ -70,29 +70,42 @@ export const LanguageProvider = ({ children }) => {
     });
   };
 
-  const t = useCallback((key) => {
+  const t = useCallback((key, options = {}) => {
     if (!key) return "";
     // CH uses German content — map to DE for all translation lookups
     const langKey = currentLanguage === 'CH' ? 'DE' : currentLanguage;
+    const count = Number(options.count);
+    const hasCount = Number.isFinite(count);
+    let lookupKeys = [key];
 
-    // 1. Try DB translations for current language
-    if (dbTranslations[langKey] && dbTranslations[langKey][key] !== undefined) {
-      return dbTranslations[langKey][key];
+    if (hasCount) {
+      let pluralCategory;
+      try {
+        pluralCategory = new Intl.PluralRules(langKey.toLowerCase()).select(count);
+      } catch {
+        pluralCategory = count === 1 ? 'one' : 'other';
+      }
+      lookupKeys = [`${key}_${pluralCategory}`, key];
+    }
+
+    // Try the count-specific key before the base key in the current language.
+    for (const lookupKey of lookupKeys) {
+      if (dbTranslations[langKey] && dbTranslations[langKey][lookupKey] !== undefined) {
+        return dbTranslations[langKey][lookupKey];
+      }
+      if (staticTranslations[langKey] && staticTranslations[langKey][lookupKey] !== undefined) {
+        return staticTranslations[langKey][lookupKey];
+      }
     }
     
-    // 2. Try static translations for current language
-    if (staticTranslations[langKey] && staticTranslations[langKey][key] !== undefined) {
-      return staticTranslations[langKey][key];
-    }
-    
-    // 3. Try DB fallback (DE)
-    if (dbTranslations['DE'] && dbTranslations['DE'][key] !== undefined) {
-      return dbTranslations['DE'][key];
-    }
-    
-    // 4. Try static fallback (DE)
-    if (staticTranslations['DE'] && staticTranslations['DE'][key] !== undefined) {
-      return staticTranslations['DE'][key];
+    // Apply the same lookup order to the German fallback.
+    for (const lookupKey of lookupKeys) {
+      if (dbTranslations['DE'] && dbTranslations['DE'][lookupKey] !== undefined) {
+        return dbTranslations['DE'][lookupKey];
+      }
+      if (staticTranslations['DE'] && staticTranslations['DE'][lookupKey] !== undefined) {
+        return staticTranslations['DE'][lookupKey];
+      }
     }
     
     // Final fallback: Return the raw key
