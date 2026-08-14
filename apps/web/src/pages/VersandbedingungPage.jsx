@@ -22,6 +22,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.j
 import { Badge } from "@/components/ui/badge.jsx";
 import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+import { useLanguage } from '@/contexts/LanguageContext.jsx';
+import { pathFor } from '@/config/routes.js';
 
 const EU_COUNTRIES = [
   "Belgien", "Bulgarien", "Dänemark", "Deutschland", "Estland", "Finnland", 
@@ -48,15 +50,16 @@ const itemVariants = {
 
 const VersandbedingungPage = () => {
   useLanguageRouting();
+  const { t, currentLanguage } = useLanguage();
 
   useScrollRestoration();
 
   return (
     <div className="min-h-screen bg-background pt-28 pb-20">
       <Helmet>
-        <html lang="de-DE" />
-        <title>{`Versand- und Zahlungsbedingungen - SMARTDOCK`}</title>
-        <meta name="description" content="Informationen zu Liefergebieten, Versandkosten, Lieferfristen und Zahlungsmöglichkeiten bei SMARTDOCK." />
+        <html lang={currentLanguage === 'FR' ? 'fr-FR' : 'de-DE'} />
+        <title>{`${t('ship_title')} - SMARTDOCK`}</title>
+        <meta name="description" content={t('ship_desc')} />
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,8 +67,8 @@ const VersandbedingungPage = () => {
         {/* Breadcrumb - Standardized position & margin */}
         <Breadcrumb 
           items={[
-            { label: <Translate>Startseite</Translate>, path: '/' },
-            { label: <Translate>Versand- & Zahlungsbedingungen</Translate>, path: '/versand' }
+            { label: <Translate>Startseite</Translate>, path: pathFor('home', currentLanguage) },
+            { label: <Translate>Versand- & Zahlungsbedingungen</Translate>, path: pathFor('shipping', currentLanguage) }
           ]} 
           className="mb-4"
         />
@@ -263,7 +266,7 @@ const VersandbedingungPage = () => {
                     <Translate>Der Rechnungsbetrag ist bei Zahlung auf Rechnung innerhalb von 14 Tagen auszugleichen.</Translate>
                   </p>
                   <p className="text-sm text-muted-foreground pt-2">
-                    <Translate>Bei Fragen finden Sie unsere Kontaktdaten im</Translate> <Link to="/impressum" className="text-primary hover:underline font-medium"><Translate>Impressum</Translate></Link>.
+                    <Translate>Bei Fragen finden Sie unsere Kontaktdaten im</Translate> <Link to={pathFor('imprint', currentLanguage)} className="text-primary hover:underline font-medium"><Translate>Impressum</Translate></Link>.
                   </p>
                 </div>
               </CardContent>

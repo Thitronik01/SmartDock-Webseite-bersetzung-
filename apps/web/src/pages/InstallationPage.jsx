@@ -35,6 +35,19 @@ const downloadFileAs = async (url, filename) => {
 
 const sanitizeFilename = (name) => `${name.replace(/[\\/:*?"<>|]+/g, '').trim()}.pdf`;
 
+const frenchGuideTitles = {
+  cubhmop1nuyi97g: 'Universel',
+  obtksgzjjfq8mbm: 'Quick TCD',
+  pk00u661igizrps: 'Vetus',
+  vg464iaea8uznhd: 'Sleipner Side-Power',
+  '337cp1alrjwrnt0': 'Installation de SMARTDOCK pour les systèmes de propulsion Yamaha avec joystick',
+  '5fbj0zzxxjnxvkq': 'Installation de SMARTDOCK pour les systèmes de propulsion Mercury/MerCruiser avec joystick',
+  '6jyst7hobko7fs2': 'Installation de SMARTDOCK pour les doubles systèmes de propulsion Volvo Penta sans joystick (EVC-D/-E/2.0)',
+  dql8d8pt3achiap: 'Installation de SMARTDOCK pour les doubles systèmes de propulsion Volvo Penta avec joystick (EVC-C/-D/-E/2.0)',
+  fer7cp5fbf9ocq9: 'Installation de SMARTDOCK pour les doubles systèmes de propulsion Volvo Penta avec joystick (EVC-B/-C)',
+  nzdk8g7p2xu4jxi: 'Installation de SMARTDOCK pour les systèmes de propulsion simples Volvo Penta (EVC-D/-E)'
+};
+
 const GuideItem = ({ guide, lang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const isEn = lang === 'EN';
@@ -43,10 +56,10 @@ const GuideItem = ({ guide, lang }) => {
   // Generate PDF URL if file exists
   const pdfUrl = guide.datei ? pb.files.getURL(guide, guide.datei) : null;
 
-  // Pick title based on selected language, falling back to German
-  const title = (isEn || isFr) && guide.titel_en && guide.titel_en.trim() !== ''
-    ? guide.titel_en
-    : guide.titel;
+  // Pick title based on selected language, falling back to the English or German source.
+  const title = isFr
+    ? (guide.titel_fr?.trim() || frenchGuideTitles[guide.id] || guide.titel_en?.trim() || guide.titel)
+    : (isEn && guide.titel_en?.trim() ? guide.titel_en : guide.titel);
 
   // Pick description based on selected language, falling back to German
   let description;
@@ -369,9 +382,9 @@ const InstallationPage = () => {
                       { label: tt('Genutzte Frequenz (Bluetooth)', 'Bluetooth frequency', 'Fréquence utilisée (Bluetooth)'), value: '2.402–2.480 GHz' },
                       { label: tt('Reichweite', 'Range', 'Portée'), value: tt('bis zu 50 m', 'up to 50 m', "jusqu'à 50 m") },
                       { label: tt('Max. Einschaltdauer', 'Max. switch-on duration', 'Durée de mise en marche max.'), value: tt('unbegrenzt', 'unlimited', 'illimitée') },
-                      { label: tt('Max. Temperaturbereich', 'Max. temperature range', 'Plage de température max.'), value: '-10 bis +60°C' },
+                      { label: tt('Max. Temperaturbereich', 'Max. temperature range', 'Plage de température max.'), value: tt('-10 bis +60 °C', '-10 to +60 °C', '-10 à +60 °C') },
                       { label: tt('Abmessungen (B x H x T)', 'Dimensions (W x H x D)', 'Dimensions (L x H x P)'), value: '84 × 98 × 21 mm' },
-                      { label: tt('Gewicht', 'Weight', 'Poids'), value: 'ca. 91 g' }
+                      { label: tt('Gewicht', 'Weight', 'Poids'), value: tt('ca. 91 g', 'approx. 91 g', 'env. 91 g') }
                     ]}
                   />
 
@@ -383,11 +396,11 @@ const InstallationPage = () => {
                       { label: tt('Stromaufnahme (12 V)', 'Current consumption (12 V)', 'Consommation de courant (12 V)'), value: '<5 mA' },
                       { label: tt('Genutzte Frequenz (Bluetooth)', 'Bluetooth frequency', 'Fréquence utilisée (Bluetooth)'), value: '2.402 - 2.480 GHz' },
                       { label: tt('Reichweite', 'Range', 'Portée'), value: tt('bis zu 50 m', 'up to 50 m', "jusqu'à 50 m") },
-                      { label: tt('Max. Einschaltdauer', 'Max. switch-on duration', 'Durée de mise en marche max.'), value: '120s (danach 120s Pause)' },
+                      { label: tt('Max. Einschaltdauer', 'Max. switch-on duration', 'Durée de mise en marche max.'), value: tt('120 s (danach 120 s Pause)', '120 s (followed by a 120 s pause)', '120 s (puis une pause de 120 s)') },
                       { label: tt('Max. Ausgangsstrom (12 V, 120 s)', 'Max. output current (12 V, 120 s)', 'Courant de sortie max. (12 V, 120 s)'), value: '4,5 A' },
-                      { label: tt('Max. Temperaturbereich', 'Max. temperature range', 'Plage de température max.'), value: '-40 bis +85°C' },
+                      { label: tt('Max. Temperaturbereich', 'Max. temperature range', 'Plage de température max.'), value: tt('-40 bis +85 °C', '-40 to +85 °C', '-40 à +85 °C') },
                       { label: tt('Abmessungen (B x H x T)', 'Dimensions (W x H x D)', 'Dimensions (L x H x P)'), value: '84 x 98 x 21 mm' },
-                      { label: tt('Gewicht', 'Weight', 'Poids'), value: 'ca. 96 g' }
+                      { label: tt('Gewicht', 'Weight', 'Poids'), value: tt('ca. 96 g', 'approx. 96 g', 'env. 96 g') }
                     ]}
                   />
 
@@ -400,9 +413,9 @@ const InstallationPage = () => {
                       { label: tt('Genutzte Frequenz (Bluetooth)', 'Bluetooth frequency', 'Fréquence utilisée (Bluetooth)'), value: '2.402 - 2.480 GHz' },
                       { label: tt('Reichweite', 'Range', 'Portée'), value: tt('bis zu 50 m', 'up to 50 m', "jusqu'à 50 m") },
                       { label: tt('Max. Ausgangsstrom (12 V, 120 s)', 'Max. output current (12 V, 120 s)', 'Courant de sortie max. (12 V, 120 s)'), value: '4,5 A' },
-                      { label: tt('Max. Temperaturbereich', 'Max. temperature range', 'Plage de température max.'), value: '-40 bis +85°C' },
+                      { label: tt('Max. Temperaturbereich', 'Max. temperature range', 'Plage de température max.'), value: tt('-40 bis +85 °C', '-40 to +85 °C', '-40 à +85 °C') },
                       { label: tt('Abmessungen (B x H x T)', 'Dimensions (W x H x D)', 'Dimensions (L x H x P)'), value: '84 x 98 x 21 mm' },
-                      { label: tt('Gewicht', 'Weight', 'Poids'), value: 'ca. 90 g' }
+                      { label: tt('Gewicht', 'Weight', 'Poids'), value: tt('ca. 90 g', 'approx. 90 g', 'env. 90 g') }
                     ]}
                   />
                 </div>

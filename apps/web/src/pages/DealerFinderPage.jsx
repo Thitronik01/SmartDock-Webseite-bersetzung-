@@ -402,7 +402,7 @@ const DealerFinderPage = () => {
               <MapContainer center={[51.1657, 10.4515]} zoom={5} style={{ height: "100%", width: "100%" }} className="z-0 bg-muted">
                 <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" />
                 <MapUpdater center={selectedDealer} markers={dealersWithCoords} />
-                {userLocation && <Marker position={[userLocation.lat, userLocation.lng]} icon={createCustomIcon(true)}><Popup>Ihr Standort</Popup></Marker>}
+                {userLocation && <Marker position={[userLocation.lat, userLocation.lng]} icon={createCustomIcon(true)}><Popup>{t('df_user_location')}</Popup></Marker>}
                 {dealersWithCoords.map((dealer) => (
                   <Marker 
                     key={`marker-${dealer.id}`} 

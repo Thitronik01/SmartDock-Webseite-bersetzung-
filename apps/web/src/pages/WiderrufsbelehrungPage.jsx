@@ -29,9 +29,12 @@ import { Input } from "@/components/ui/input.jsx";
 import { Textarea } from "@/components/ui/textarea.jsx";
 import { Label } from "@/components/ui/label.jsx";
 import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+import { useLanguage } from '@/contexts/LanguageContext.jsx';
+import { pathFor } from '@/config/routes.js';
 
 const WiderrufsbelehrungPage = () => {
   useLanguageRouting();
+  const { t, currentLanguage } = useLanguage();
 
   useScrollRestoration();
 
@@ -42,9 +45,9 @@ const WiderrufsbelehrungPage = () => {
   return (
     <div className="min-h-screen bg-background pt-28 pb-20 print:pt-0 print:bg-white">
       <Helmet>
-        <html lang="de-DE" />
-        <title>{`Widerrufsbelehrung - SMARTDOCK`}</title>
-        <meta name="description" content="Detaillierte Widerrufsbelehrung und Informationen zum Widerrufsrecht für Verbraucher bei SMARTDOCK." />
+        <html lang={currentLanguage === 'FR' ? 'fr-FR' : 'de-DE'} />
+        <title>{`${t('rev_title')} - SMARTDOCK`}</title>
+        <meta name="description" content={t('rev_desc')} />
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 print:px-0 print:max-w-none">
@@ -52,8 +55,8 @@ const WiderrufsbelehrungPage = () => {
         {/* Breadcrumb - Standardized position & margin */}
         <Breadcrumb 
           items={[
-            { label: <Translate>Startseite</Translate>, path: '/' },
-            { label: <Translate>Widerrufsbelehrung</Translate>, path: '/widerrufsbelehrung' }
+            { label: <Translate>Startseite</Translate>, path: pathFor('home', currentLanguage) },
+            { label: <Translate>Widerrufsbelehrung</Translate>, path: pathFor('withdrawal', currentLanguage) }
           ]} 
           className="mb-4 print:hidden"
         />

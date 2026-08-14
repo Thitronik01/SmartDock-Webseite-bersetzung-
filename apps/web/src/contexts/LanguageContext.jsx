@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { translations as staticTranslations } from '@/utils/translations/index.js';
 import { COUNTRIES } from '@/translations.js';
@@ -7,6 +7,25 @@ import { getLangFromPath, getEquivalentPath } from '@/config/routes.js';
 import pb from '@/lib/pocketbaseClient.js';
 
 export const LanguageContext = createContext();
+
+const normalizeSourceText = (value) => String(value ?? '')
+  .replace(/[‘’‚‛“”„‟'\"]/g, '"')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const createSourceKeyIndex = (dictionary = {}) => {
+  const index = new Map();
+  Object.entries(dictionary).forEach(([key, value]) => {
+    if (typeof value !== 'string' || !value.trim()) return;
+    const normalized = normalizeSourceText(value);
+    const keys = index.get(normalized) || [];
+    keys.push(key);
+    index.set(normalized, keys);
+  });
+  return index;
+};
+
+const staticSourceKeysByText = createSourceKeyIndex(staticTranslations.DE);
 
 export const LanguageProvider = ({ children }) => {
   const location = useLocation();
@@ -19,6 +38,10 @@ export const LanguageProvider = ({ children }) => {
   const currentCountry = COUNTRIES.find(c => c.code === countryCode) || COUNTRIES[0];
 
   const [dbTranslations, setDbTranslations] = useState({ DE: {}, EN: {}, FR: {} });
+  const dbSourceKeysByText = useMemo(
+    () => createSourceKeyIndex(dbTranslations.DE),
+    [dbTranslations.DE]
+  );
 
   // Fetch translations from PocketBase on mount
   useEffect(() => {
@@ -112,7 +135,28 @@ export const LanguageProvider = ({ children }) => {
     return key;
   }, [currentLanguage, dbTranslations]);
 
-  const translateText = async (text) => text;
+  const translateText = useCallback(async (text, requestedLanguage = currentLanguage) => {
+    if (typeof text !== 'string') return text;
+
+    const langKey = requestedLanguage === 'CH' ? 'DE' : requestedLanguage;
+    if (langKey === 'DE') return text;
+
+    const normalized = normalizeSourceText(text);
+    const candidateKeys = [
+      ...(dbSourceKeysByText.get(normalized) || []),
+      ...(staticSourceKeysByText.get(normalized) || []),
+    ];
+
+    for (const key of candidateKeys) {
+      const dbValue = dbTranslations[langKey]?.[key];
+      if (typeof dbValue === 'string' && dbValue.trim()) return dbValue;
+
+      const staticValue = staticTranslations[langKey]?.[key];
+      if (typeof staticValue === 'string' && staticValue.trim()) return staticValue;
+    }
+
+    return text;
+  }, [currentLanguage, dbSourceKeysByText, dbTranslations]);
 
   return (
     <LanguageContext.Provider value={{ 

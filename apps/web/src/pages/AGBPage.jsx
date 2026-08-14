@@ -8,18 +8,21 @@ import Translate from '@/components/Translate.jsx';
 import Breadcrumb from '@/components/Breadcrumb.jsx';
 import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+import { useLanguage } from '@/contexts/LanguageContext.jsx';
+import { pathFor } from '@/config/routes.js';
 
 const AGBPage = () => {
   useLanguageRouting();
+  const { t, currentLanguage } = useLanguage();
 
   useScrollRestoration();
 
   return (
     <div className="min-h-screen bg-background pt-28 pb-20">
       <Helmet>
-        <html lang="de-DE" />
-        <title>{`AGB & Kundeninformationen - SMARTDOCK`}</title>
-        <meta name="description" content="Allgemeine Geschäftsbedingungen und Kundeninformationen der Thitronik GmbH für SMARTDOCK." />
+        <html lang={currentLanguage === 'FR' ? 'fr-FR' : 'de-DE'} />
+        <title>{`${t('agb_title')} - SMARTDOCK`}</title>
+        <meta name="description" content={t('agb_desc')} />
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,8 +30,8 @@ const AGBPage = () => {
         {/* Breadcrumb - Standardized position & margin */}
         <Breadcrumb 
           items={[
-            { label: <Translate>Startseite</Translate>, path: '/' },
-            { label: <Translate>AGB & Kundeninformationen</Translate>, path: '/agb' }
+            { label: <Translate>Startseite</Translate>, path: pathFor('home', currentLanguage) },
+            { label: <Translate>AGB & Kundeninformationen</Translate>, path: pathFor('terms', currentLanguage) }
           ]} 
           className="mb-4"
         />
@@ -177,7 +180,7 @@ const AGBPage = () => {
                   <p className="font-medium text-foreground text-lg">Thitronik GmbH</p>
                   <p>Finkenweg 9-15</p>
                   <p>24340 Eckernförde</p>
-                  <p>Deutschland</p>
+                  <p><Translate>Deutschland</Translate></p>
                   <div className="pt-3 space-y-2">
                     <p className="flex items-center">
                       <span className="w-20"><Translate>Telefon:</Translate></span>
