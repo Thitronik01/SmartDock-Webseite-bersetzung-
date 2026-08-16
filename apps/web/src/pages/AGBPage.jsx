@@ -120,7 +120,7 @@ const AGBPage = () => {
                   <Translate>(1) Alle auf der Website genannten Preise stellen unverbindliche Preisempfehlungen in Euro dar und beinhalten die gesetzliche Mehrwertsteuer (sofern nicht anders als Netto-Preise für Unternehmer ausgewiesen).</Translate>
                 </p>
                 <p>
-                  <Translate>(2) Die Zahlungsbedingungen sowie Modalitäten zur Lieferung und Installation werden im jeweiligen verbindlichen Angebot detailliert geregelt. In der Regel ist die Installation durch geschultes Fachpersonal unserer zertifizierten Händler zwingend vorgeschrieben, um eine fehlerfreie Funktion in sicherheitsrelevanten maritime Umgebungen zu gewährleisten.</Translate>
+                  <Translate>(2) Die Zahlungsbedingungen sowie Modalitäten zur Lieferung und Installation werden im jeweiligen verbindlichen Angebot detailliert geregelt. In der Regel ist die Installation durch geschultes Fachpersonal unserer zertifizierten Händler zwingend vorgeschrieben, um eine fehlerfreie Funktion in sicherheitsrelevanten maritimen Umgebungen zu gewährleisten.</Translate>
                 </p>
               </div>
             </section>

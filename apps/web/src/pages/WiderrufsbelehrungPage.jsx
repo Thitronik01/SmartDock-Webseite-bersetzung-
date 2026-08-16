@@ -145,7 +145,7 @@ const WiderrufsbelehrungPage = () => {
                   </p>
                   <div className="p-6 bg-muted/40 rounded-xl space-y-2 my-6 border border-border print:border-black print:bg-transparent">
                     <p className="font-semibold text-foreground print:text-black">Thitronik GmbH</p>
-                    <p>Finkenweg 11–15</p>
+                    <p>Finkenweg 9-15</p>
                     <p>24340 Eckernförde</p>
                     <p><Translate>Deutschland</Translate></p>
                     <div className="pt-2">
@@ -281,7 +281,7 @@ const WiderrufsbelehrungPage = () => {
                   <div className="p-6 bg-muted/40 rounded-xl border border-border print:border-none print:p-0 print:bg-transparent">
                     <p className="text-sm text-muted-foreground mb-2 font-medium uppercase tracking-wider"><Translate>An:</Translate></p>
                     <p className="font-semibold text-lg">Thitronik GmbH</p>
-                    <p>Finkenweg 11–15</p>
+                    <p>Finkenweg 9-15</p>
                     <p>24340 Eckernförde</p>
                     <p><Translate>Deutschland</Translate></p>
                     <p className="mt-2"><Translate>E-Mail:</Translate> smartdock@thitronik.de</p>
