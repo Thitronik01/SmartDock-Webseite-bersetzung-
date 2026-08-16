@@ -16,8 +16,10 @@ import FunktionenPage from '@/pages/FunktionenPage.jsx';
 import FeaturesPage from '@/pages/FeaturesPage.jsx';
 import InstallationPage from '@/pages/InstallationPage.jsx';
 import PrivacyPage from '@/pages/PrivacyPage.jsx';
+import PrivacyPage_FR from '@/pages/PrivacyPage_FR.jsx';
 import ImpressumPage from '@/pages/ImpressumPage.jsx';
 import ImpressumPage_EN from '@/pages/ImpressumPage_EN.jsx';
+import ImpressumPage_FR from '@/pages/ImpressumPage_FR.jsx';
 import AGBPage from '@/pages/AGBPage.jsx';
 import AGBPage_EN from '@/pages/AGBPage_EN.jsx';
 import AccessibilityPage from '@/pages/AccessibilityPage.jsx';
@@ -103,8 +105,8 @@ const AppContent = () => {
           <Route path="/fr/contact" element={<HomePage />} />
           <Route path="/fr/configurateur" element={<ConfiguratorPage />} />
           <Route path="/fr/revendeurs" element={<DealerFinderPage />} />
-          <Route path="/fr/confidentialite" element={<PrivacyPage />} />
-          <Route path="/fr/mentions-legales" element={<ImpressumPage />} />
+          <Route path="/fr/confidentialite" element={<PrivacyPage_FR />} />
+          <Route path="/fr/mentions-legales" element={<ImpressumPage_FR />} />
           <Route path="/fr/cgv" element={<AGBPage />} />
           <Route path="/fr/accessibilite" element={<AccessibilityPage />} />
           <Route path="/fr/droit-de-retractation" element={<WiderrufsbelehrungPage />} />

@@ -24,7 +24,7 @@ Zusätzlich bestehen fachliche Konflikte, die nicht durch Übersetzung gelöst w
 
 Die sprachliche Arbeit für alle identifizierten, aktiven und browser-sichtbaren Inhalte ist abgeschlossen:
 
-- 746 strukturierte Zielsprachzeilen mit stabilen Translation IDs
+- 747 strukturierte Zielsprachzeilen mit stabilen Translation IDs
 - vollständige Zielsets für DA, ES, NL, NB und SV
 - globale Navigation, Homepage, Kontakt, Produkt, Funktionen und Installation
 - FAQ-Seite einschließlich aller elf dynamischen FAQ-Einträge
@@ -59,6 +59,14 @@ Die Übersetzungen sind sprachlich vollständig, aber noch nicht veröffentlichu
 
 Die konkreten Arbeitspakete werden als GitHub Issues geführt. `TARGET_REVIEW` bedeutet: Übersetzung vorhanden, Veröffentlichung erst nach der jeweils genannten Freigabe.
 
+## Vorbereitung und Projektsteuerung
+
+- [Entscheidungsbriefing für Montag, 17. August 2026](MONTAG_BRIEFING_2026-08-17.md)
+- [Technische Roadmap für DA, ES, NL, NB und SV](TECHNISCHE_ROADMAP_LOKALISIERUNG.md)
+- [QA-Arbeitsexport und vollständiger Prüfbericht](qa-arbeitsexport/00_INDEX.md)
+- [Release-Tracking-Issue #10](https://github.com/Thitronik01/SmartDock-Webseite-bersetzung-/issues/10)
+- [Draft-PR #12](https://github.com/Thitronik01/SmartDock-Webseite-bersetzung-/pull/12)
+
 ## Repository-Struktur
 
 ```text
@@ -80,5 +88,13 @@ cp apps/api/.env.example apps/api/.env
 npm install
 npm run dev
 ```
+
+Vollständige lokale Prüfung mit Node 22:
+
+```bash
+npm run verify
+```
+
+Der Prüfablauf verifiziert die 117 QA-Sollwerte, führt die Codeprüfung aus und baut die Webanwendung. Derselbe Ablauf läuft bei Pull Requests automatisch über GitHub Actions.
 
 Benötigte Zugangsdaten werden ausschließlich lokal oder über die jeweilige Deployment-Umgebung bereitgestellt.

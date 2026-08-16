@@ -7,18 +7,21 @@ import Translate from '@/components/Translate.jsx';
 import Breadcrumb from '@/components/Breadcrumb.jsx';
 import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+import { useLanguage } from '@/contexts/LanguageContext.jsx';
+import { pathFor } from '@/config/routes.js';
 
 const AccessibilityPage = () => {
   useLanguageRouting();
+  const { t, currentLanguage } = useLanguage();
 
   useScrollRestoration();
 
   return (
     <div className="min-h-screen bg-background pt-28 pb-20">
       <Helmet>
-        <html lang="de-DE" />
-        <title>{`Barrierefreiheit - SMARTDOCK`}</title>
-        <meta name="description" content="Erklärung zur Barrierefreiheit der Thitronik GmbH gemäß den gesetzlichen Vorgaben." />
+        <html lang={currentLanguage === 'FR' ? 'fr-FR' : 'de-DE'} />
+        <title>{`${t('acc_title')} - SMARTDOCK`}</title>
+        <meta name="description" content={t('acc_desc')} />
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,8 +29,8 @@ const AccessibilityPage = () => {
         {/* Breadcrumb - Standardized position & margin */}
         <Breadcrumb 
           items={[
-            { label: <Translate>Startseite</Translate>, path: '/' },
-            { label: <Translate>Barrierefreiheit</Translate>, path: '/barrierefreiheit' }
+            { label: <Translate>Startseite</Translate>, path: pathFor('home', currentLanguage) },
+            { label: <Translate>Barrierefreiheit</Translate>, path: pathFor('accessibility', currentLanguage) }
           ]} 
           className="mb-4"
         />

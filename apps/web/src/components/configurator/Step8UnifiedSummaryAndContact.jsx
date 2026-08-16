@@ -685,7 +685,7 @@ const Step8UnifiedSummaryAndContact = () => {
             <div className="flex flex-col md:flex-row gap-8 flex-grow min-h-[500px]">
               <div className={`w-full md:w-[40%] flex flex-col h-[500px] md:h-auto bg-card border border-border rounded-2xl overflow-hidden ${activeTab === 'map' ? 'hidden md:flex' : 'flex'}`}>
                 <div className="p-5 border-b border-border bg-muted/40">
-                  <h3 className="font-semibold text-lg flex items-center"><Search className="w-5 h-5 mr-2 text-primary" /> {loadingDealers ? '...' : filteredDealers.length} {t('df_found')}</h3>
+                  <h3 className="font-semibold text-lg flex items-center"><Search className="w-5 h-5 mr-2 text-primary" /> {loadingDealers ? '...' : filteredDealers.length} {t('df_found', { count: filteredDealers.length })}</h3>
                 </div>
                 <div className="flex-1 overflow-y-auto p-5 space-y-4">
                   {loadingDealers ? (
@@ -748,7 +748,7 @@ const Step8UnifiedSummaryAndContact = () => {
                   <MapContainer center={[51.1657, 10.4515]} zoom={5} style={{ height: "100%", width: "100%" }} className="z-0 bg-muted">
                     <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" />
                     <MapUpdater center={selectedDealer} markers={dealersWithCoords} />
-                    {userLocation && <Marker position={[userLocation.lat, userLocation.lng]} icon={createCustomIcon(true)}><Popup>{isFR ? 'Votre position' : (isEN ? 'Your Location' : 'Ihr Standort')}</Popup></Marker>}
+                    {userLocation && <Marker position={[userLocation.lat, userLocation.lng]} icon={createCustomIcon(true)}><Popup>{t('df_user_location')}</Popup></Marker>}
                     {dealersWithCoords.map((dealer) => (
                       <Marker 
                         key={`marker-${dealer.id}`} 

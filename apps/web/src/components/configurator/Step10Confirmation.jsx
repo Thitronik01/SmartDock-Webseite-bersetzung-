@@ -6,22 +6,23 @@ import { useLanguage } from '@/contexts/LanguageContext.jsx';
 import { Button } from '@/components/ui/button.jsx';
 import { CheckCircle2, MapPin, Phone, Mail, FileText, Anchor, Settings, AlertCircle } from 'lucide-react';
 import { Card } from '@/components/ui/card.jsx';
+import { pathFor } from '@/config/routes.js';
 
 const Step10Confirmation = () => {
   const navigate = useNavigate();
   const { configurationRecord, selectedDealer, resetConfigurator } = useConfigurator();
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
 
   const handleReturnHome = () => {
     resetConfigurator();
-    navigate('/');
+    navigate(pathFor('home', currentLanguage));
   };
 
   if (!configurationRecord) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[50vh] text-center space-y-6">
-        <p className="text-xl text-muted-foreground">Daten konnten nicht geladen werden.</p>
-        <Button onClick={handleReturnHome}>Zurück zur Startseite</Button>
+        <p className="text-xl text-muted-foreground">{t('conf_succ_data_error')}</p>
+        <Button onClick={handleReturnHome}>{t('conf_succ_btn_home')}</Button>
       </div>
     );
   }
@@ -40,10 +41,10 @@ const Step10Confirmation = () => {
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground">
-          {t('succ_title') || 'Vielen Dank!'}
+          {t('conf_succ_title')}
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Der ausgewählte Händler wird sich in Kürze bei Ihnen melden.
+          {selectedDealer ? t('conf_succ_desc') : t('conf_succ_desc_no_dealer')}
         </p>
       </div>
 
@@ -51,21 +52,21 @@ const Step10Confirmation = () => {
         <Card className="p-6 border-border shadow-sm bg-card space-y-4">
           <div className="flex items-center gap-3 text-primary border-b border-border/50 pb-4">
             <FileText className="w-6 h-6" />
-            <h3 className="font-semibold text-lg text-foreground">Anfrage Details</h3>
+            <h3 className="font-semibold text-lg text-foreground">{t('conf_succ_details')}</h3>
           </div>
           <div className="space-y-3 text-sm">
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Referenznummer</span>
+              <span className="text-muted-foreground">{t('conf_succ_ref')}</span>
               <span className="font-mono font-medium">{configurationRecord.referenceNumber}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Kunde</span>
+              <span className="text-muted-foreground">{t('conf_succ_customer')}</span>
               <span className="font-medium">{configurationRecord.firstName} {configurationRecord.lastName}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Status</span>
+              <span className="text-muted-foreground">{t('conf_succ_status')}</span>
               <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
-                Übermittelt
+                {t('conf_succ_status_val')}
               </span>
             </div>
           </div>
@@ -73,22 +74,22 @@ const Step10Confirmation = () => {
           <div className="pt-4 border-t border-border/50 space-y-3">
             <div className="flex items-center gap-2 text-foreground font-medium mb-2">
               <Settings className="w-4 h-4 text-muted-foreground" />
-              Ihre Konfiguration
+              {t('conf_succ_configuration')}
             </div>
             {configurationRecord.motorType && (
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Motor</span>
+                <span className="text-muted-foreground">{t('conf_succ_motor')}</span>
                 <span className="font-medium text-right">{configurationRecord.motorType} <br/> <span className="text-xs font-normal text-muted-foreground">{configurationRecord.motorCount}</span></span>
               </div>
             )}
             {configurationRecord.joystickType && (
               <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Steuerung</span>
+                <span className="text-muted-foreground">{t('conf_succ_control')}</span>
                 <span className="font-medium text-right">{configurationRecord.joystickType}</span>
               </div>
             )}
             <div className="flex justify-between text-sm pt-2">
-              <span className="text-muted-foreground">Systeme</span>
+              <span className="text-muted-foreground">{t('conf_succ_systems')}</span>
               <span className="font-medium text-right">{features.join(', ')}</span>
             </div>
           </div>
@@ -98,7 +99,7 @@ const Step10Confirmation = () => {
           <Card className="p-6 border-border shadow-sm bg-card space-y-4">
             <div className="flex items-center gap-3 text-primary border-b border-border/50 pb-4">
               <Anchor className="w-6 h-6" />
-              <h3 className="font-semibold text-lg text-foreground">Zuständiger Händler</h3>
+              <h3 className="font-semibold text-lg text-foreground">{t('conf_succ_dealer')}</h3>
             </div>
             <div className="space-y-4">
               <h4 className="font-bold text-lg">{selectedDealer.name}</h4>
@@ -124,7 +125,7 @@ const Step10Confirmation = () => {
           </Card>
         ) : (
           <Card className="p-6 border-border shadow-sm bg-muted/50 flex items-center justify-center text-center">
-            <p className="text-muted-foreground">Es wurde kein spezifischer Händler ausgewählt. Unser Service-Team wird Sie kontaktieren.</p>
+            <p className="text-muted-foreground">{t('conf_succ_no_dealer')}</p>
           </Card>
         )}
       </div>
@@ -134,9 +135,9 @@ const Step10Confirmation = () => {
         <div className="flex gap-4 items-start">
           <AlertCircle className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
           <div className="space-y-2">
-            <h3 className="font-semibold text-amber-900 text-sm sm:text-base">Unverbindliche Konfiguration</h3>
+            <h3 className="font-semibold text-amber-900 text-sm sm:text-base">{t('config_nonbinding_title')}</h3>
             <p className="text-amber-800 text-xs sm:text-sm leading-relaxed">
-              Durch das Ausfüllen, Zusammenstellen oder Absenden dieser Konfiguration entstehen weder ein Vertrag noch eine Bestellung oder sonstige rechtliche beziehungsweise finanzielle Verpflichtungen. Diese Konfiguration dient ausschließlich der unverbindlichen Information und Vorbereitung.
+              {t('config_nonbinding_description')}
             </p>
           </div>
         </div>
@@ -148,7 +149,7 @@ const Step10Confirmation = () => {
           size="lg" 
           className="bg-primary text-primary-foreground font-semibold px-8 h-12 rounded-full shadow-md hover:shadow-lg transition-all"
         >
-          Zurück zur Startseite
+          {t('conf_succ_btn_home')}
         </Button>
       </div>
     </div>

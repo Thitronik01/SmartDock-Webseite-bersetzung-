@@ -122,13 +122,13 @@ const PHRASE_REPLACEMENTS_FR = [
 const EXACT_MATCHES_EN = {
   'Ja, ein Joystick ist vorhanden': 'Yes, a joystick is available',
   'Nein, nur Gashebel': 'No, throttle only',
-  'MerCruiser Bj 2016': 'MerCruiser Built 2016 (Sterndrive or Zeus)'
+  'MerCruiser Bj 2016': 'MerCruiser from model year 2016 (Sterndrive or Zeus)'
 };
 
 const EXACT_MATCHES_FR = {
   'Ja, ein Joystick ist vorhanden': 'Oui, un joystick est présent',
   'Nein, nur Gashebel': 'Non, seulement une manette des gaz',
-  'MerCruiser Bj 2016': 'MerCruiser 2016 (propulsion en Z ou Zeus)'
+  'MerCruiser Bj 2016': 'MerCruiser à partir de 2016 (embase Z ou Zeus)'
 };
 
 export const translateConfigValue = (value, isEN, isFR = false) => {

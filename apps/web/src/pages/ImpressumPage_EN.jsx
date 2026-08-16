@@ -226,7 +226,7 @@ const ImpressumPage_EN = () => {
 
               <div>
                 <p className="font-medium text-foreground mb-3">Scope:</p>
-                <p>Professional liability insurance is valid worldwide.</p>
+                <p>Professional liability insurance is valid worldwide, with the exception of the USA, Canada and their territories.</p>
               </div>
             </div>
           </motion.div>

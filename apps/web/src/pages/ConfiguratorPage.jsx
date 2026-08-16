@@ -5,6 +5,7 @@ import { ConfiguratorProvider } from '@/contexts/ConfiguratorContext.jsx';
 import { useLanguage } from '@/contexts/LanguageContext.jsx';
 import ConfiguratorLayout from '@/components/configurator/ConfiguratorLayout.jsx';
 import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { pathFor } from '@/config/routes.js';
 
 const ConfiguratorPage = () => {
   const { currentLanguage } = useLanguage();
@@ -29,8 +30,8 @@ const ConfiguratorPage = () => {
           {/* Single, central Breadcrumb using LanguageContext */}
           <Breadcrumb 
             items={[
-              { label: homeLabel, path: '/' },
-              { label: configLabel, path: '/konfigurator' }
+              { label: homeLabel, path: pathFor('home', currentLanguage) },
+              { label: configLabel, path: pathFor('configurator', currentLanguage) }
             ]} 
             className="mb-8" 
           />

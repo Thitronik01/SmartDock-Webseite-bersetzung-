@@ -29,9 +29,12 @@ import { Input } from "@/components/ui/input.jsx";
 import { Textarea } from "@/components/ui/textarea.jsx";
 import { Label } from "@/components/ui/label.jsx";
 import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+import { useLanguage } from '@/contexts/LanguageContext.jsx';
+import { pathFor } from '@/config/routes.js';
 
 const WiderrufsbelehrungPage = () => {
   useLanguageRouting();
+  const { t, currentLanguage } = useLanguage();
 
   useScrollRestoration();
 
@@ -42,9 +45,9 @@ const WiderrufsbelehrungPage = () => {
   return (
     <div className="min-h-screen bg-background pt-28 pb-20 print:pt-0 print:bg-white">
       <Helmet>
-        <html lang="de-DE" />
-        <title>{`Widerrufsbelehrung - SMARTDOCK`}</title>
-        <meta name="description" content="Detaillierte Widerrufsbelehrung und Informationen zum Widerrufsrecht für Verbraucher bei SMARTDOCK." />
+        <html lang={currentLanguage === 'FR' ? 'fr-FR' : 'de-DE'} />
+        <title>{`${t('rev_title')} - SMARTDOCK`}</title>
+        <meta name="description" content={t('rev_desc')} />
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 print:px-0 print:max-w-none">
@@ -52,8 +55,8 @@ const WiderrufsbelehrungPage = () => {
         {/* Breadcrumb - Standardized position & margin */}
         <Breadcrumb 
           items={[
-            { label: <Translate>Startseite</Translate>, path: '/' },
-            { label: <Translate>Widerrufsbelehrung</Translate>, path: '/widerrufsbelehrung' }
+            { label: <Translate>Startseite</Translate>, path: pathFor('home', currentLanguage) },
+            { label: <Translate>Widerrufsbelehrung</Translate>, path: pathFor('withdrawal', currentLanguage) }
           ]} 
           className="mb-4 print:hidden"
         />
@@ -142,7 +145,7 @@ const WiderrufsbelehrungPage = () => {
                   </p>
                   <div className="p-6 bg-muted/40 rounded-xl space-y-2 my-6 border border-border print:border-black print:bg-transparent">
                     <p className="font-semibold text-foreground print:text-black">Thitronik GmbH</p>
-                    <p>Finkenweg 11–15</p>
+                    <p>Finkenweg 9-15</p>
                     <p>24340 Eckernförde</p>
                     <p><Translate>Deutschland</Translate></p>
                     <div className="pt-2">
@@ -278,7 +281,7 @@ const WiderrufsbelehrungPage = () => {
                   <div className="p-6 bg-muted/40 rounded-xl border border-border print:border-none print:p-0 print:bg-transparent">
                     <p className="text-sm text-muted-foreground mb-2 font-medium uppercase tracking-wider"><Translate>An:</Translate></p>
                     <p className="font-semibold text-lg">Thitronik GmbH</p>
-                    <p>Finkenweg 11–15</p>
+                    <p>Finkenweg 9-15</p>
                     <p>24340 Eckernförde</p>
                     <p><Translate>Deutschland</Translate></p>
                     <p className="mt-2"><Translate>E-Mail:</Translate> smartdock@thitronik.de</p>
