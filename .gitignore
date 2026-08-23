@@ -28,3 +28,7 @@ apps/pocketbase/pocketbase
 Thumbs.db
 .vscode/
 .idea/
+
+# Hostinger-Exporte: Momentaufnahmen, Ordnername wechselt je Export
+horizons-export-*/
+.codex-temp-smartdock/
