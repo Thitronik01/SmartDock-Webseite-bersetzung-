@@ -1,5 +1,14 @@
 # Montag, Block A — 5 Dateien
 
+> ## Vorher NICHT veröffentlichen
+>
+> Den spanischen Seiten fehlt noch der Vermerk, der Google sagt: nicht in die
+> Suchergebnisse aufnehmen. Wird jetzt veröffentlicht, könnte Google die
+> halbfertigen spanischen Seiten anzeigen — und das dauert Wochen, bis es
+> wieder verschwindet.
+>
+> **Block A setzt diesen Vermerk. Erst danach ist Veröffentlichen unbedenklich.**
+
 Alle fünf existieren in Hostinger bereits. **Kein Horizons-Chat nötig**, nur
 Code-Editor. Reihenfolge egal.
 
