@@ -32,3 +32,10 @@ Thumbs.db
 # Hostinger-Exporte: Momentaufnahmen, Ordnername wechselt je Export
 horizons-export-*/
 .codex-temp-smartdock/
+
+# Arbeitsreste, gehoeren nicht ins Repo
+tmp/
+vault/
+outputs/
+.claude/
+deployment/_VERALTET_*

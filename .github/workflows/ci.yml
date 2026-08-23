@@ -35,6 +35,9 @@ jobs:
       - name: Verify localization QA values
         run: npm run qa:localization
 
+      - name: Run locale and Spanish dictionary tests
+        run: npm run test:locales --prefix apps/web
+
       - name: Run lint checks
         run: npm run lint
 
