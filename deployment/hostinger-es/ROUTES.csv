@@ -1,0 +1,17 @@
+key,url,status
+home,/es,preview
+product,/es/producto,preview
+functions,/es/funciones,preview
+features_legacy,/es/funciones-legado,preview
+installation,/es/instalacion,preview
+faq,/es/faq,preview
+configurator,/es/configurador,preview
+dealer,/es/distribuidores,preview
+privacy,/es/privacidad,preview
+imprint,/es/aviso-legal,preview
+terms,/es/terminos,preview
+accessibility,/es/accesibilidad,preview
+withdrawal,/es/desistimiento,preview
+shipping,/es/envios,preview
+contact,/es/contacto,preview
+
