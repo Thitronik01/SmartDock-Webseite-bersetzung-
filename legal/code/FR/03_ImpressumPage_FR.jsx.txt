@@ -85,7 +85,7 @@ const ImpressumPage_FR = () => {
 
               <div className="space-y-1">
                 <p>N° d'identification TVA: DE268454642</p>
-                <p>Inscrit au le registre de commerce du tribunal de commerce Kiel</p>
+                <p>Inscrit au registre de commerce du tribunal de commerce Kiel</p>
                 <p>Numéro de registre de commerce HRB 11453</p>
               </div>
             </div>
@@ -119,7 +119,7 @@ const ImpressumPage_FR = () => {
                 <p>Eckernförde</p>
               </div>
 
-              <p>Champ d'application national de l'assurance responsabilité professionnelle: weltweit außer USA, Kanada und USA Territorien</p>
+              <p>Champ d'application territorial de l'assurance responsabilité professionnelle : dans le monde entier, à l'exception des États-Unis, du Canada et des territoires américains</p>
             </div>
           </motion.div>
 
