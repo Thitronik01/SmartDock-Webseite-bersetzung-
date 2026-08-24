@@ -1,0 +1,242 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { Accessibility, CheckCircle2, AlertTriangle, Calendar } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const AccessibilityPage_FR = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="fr" />
+        <title>{`Accessibilité - SMARTDOCK`}</title>
+        <meta name="description" content="Déclaration d'accessibilité de Thitronik GmbH conformément aux dispositions légales." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Accueil', path: '/fr' },
+            { label: 'Accessibilité', path: '/fr/accessibilite' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <Accessibility className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Déclaration d'accessibilité
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            Informations sur l'accessibilité de ce site web et sur notre engagement en faveur de l'accessibilité numérique.
+          </p>
+        </motion.div>
+
+        <div className="space-y-8">
+          {/* Section 1: Introduction */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <h2 className="text-2xl font-bold text-foreground tracking-tight">
+                1. Introduction
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Thitronik GmbH s'efforce de rendre son site web accessible conformément à la loi allemande sur le renforcement de l'accessibilité (Barrierefreiheitsstärkungsgesetz, BFSG) ainsi qu'au règlement correspondant (Barrierefreiheitsstärkungsverordnung, BFSGV).
+              </p>
+              <p>
+                La présente déclaration d'accessibilité s'applique au site web www.smartdock.de.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Section 2: État de conformité */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <h2 className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-3">
+                <span>2. État de conformité avec les exigences</span>
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="flex items-start gap-4 p-4 bg-muted/50 rounded-xl mb-4">
+                <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                <p className="font-medium text-foreground">
+                  Partiellement conforme
+                </p>
+              </div>
+              <p>
+                En raison des exceptions énumérées ci-dessous, ce site web est partiellement conforme aux Web Content Accessibility Guidelines (WCAG) 2.1 niveau AA et à la norme européenne EN 301 549.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Section 3: Contenus non accessibles */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <h2 className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-3">
+                <span>3. Contenus non accessibles</span>
+              </h2>
+            </div>
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                Les contenus énumérés ci-dessous ne sont pas encore entièrement accessibles, pour les raisons suivantes :
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                  <span>
+                    <strong>Formulaires :</strong> certains formulaires peuvent contenir des champs de saisie qui ne sont pas étiquetés de manière complète ou suffisante pour les utilisateurs de lecteurs d'écran.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                  <span>
+                    <strong>Images et graphiques :</strong> pour certaines images ou certains graphiques, les textes alternatifs (attributs alt) sont absents ou insuffisamment explicites.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                  <span>
+                    <strong>Vidéos :</strong> les contenus vidéo intégrés ne disposent actuellement pas tous de sous-titres ou de transcriptions complets.
+                  </span>
+                </li>
+              </ul>
+              <p className="p-4 bg-muted rounded-lg mt-6">
+                Nous travaillons en permanence à l'amélioration de nos offres numériques. Un audit externe d'accessibilité est prévu afin de corriger de manière structurée les défauts identifiés.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Section 4: Établissement de la déclaration */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <h2 className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-3">
+                <span>4. Établissement de la présente déclaration d'accessibilité</span>
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed flex items-start gap-4">
+              <Calendar className="w-5 h-5 text-primary shrink-0 mt-1" />
+              <div>
+                <p>
+                  La présente déclaration a été établie le 9 juillet 2025.
+                </p>
+                <p className="mt-2">
+                  L'évaluation repose sur une auto-évaluation interne du site web et de ses fonctionnalités.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Section 5: Retour d'information et coordonnées */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <h2 className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-3">
+                <span>5. Retour d'information et coordonnées</span>
+              </h2>
+            </div>
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                Avez-vous constaté des obstacles à l'accès aux contenus de www.smartdock.de ? Ou avez-vous des questions concernant l'accessibilité ? N'hésitez pas à nous contacter :
+              </p>
+              
+              <div className="p-6 bg-muted/40 rounded-xl space-y-1">
+                <p className="font-medium text-foreground text-lg">Thitronik GmbH</p>
+                <p>Finkenweg 9-15</p>
+                <p>24340 Eckernförde</p>
+                <div className="pt-3 space-y-2">
+                  <p className="flex items-center">
+                    <span className="w-24">E-mail :</span>
+                    <a href="mailto:kontakt@thitronik.de" className="text-primary font-medium hover:underline transition-colors">kontakt@thitronik.de</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Section 6: Procédure de recours */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <h2 className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-3">
+                <span>6. Procédure de recours</span>
+              </h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Si, après nous avoir contactés, vous n'avez reçu aucune réponse ou aucune réponse satisfaisante, vous pouvez vous adresser à l'organe de conciliation prévu par la loi allemande sur l'égalité des personnes handicapées (Behindertengleichstellungsgesetz, BGG) auprès de la Bundesnetzagentur.
+              </p>
+              <p>
+                Cet organe de conciliation a pour mission de régler à l'amiable les conflits entre les personnes en situation de handicap et les organismes non publics (entreprises).
+              </p>
+              
+              <div className="p-6 bg-muted/40 rounded-xl space-y-1 mt-4">
+                <p className="font-medium text-foreground">Organe de conciliation conformément au BFSG auprès de la Bundesnetzagentur</p>
+                <p>Tulpenfeld 4</p>
+                <p>53113 Bonn</p>
+                <p>Allemagne</p>
+                <div className="pt-3 space-y-2">
+                  <p className="flex items-start md:items-center flex-col md:flex-row gap-1 md:gap-0">
+                    <span className="w-24 shrink-0">E-mail :</span>
+                    <a href="mailto:barrierefreiheit@bnetza.de" className="text-primary font-medium hover:underline transition-colors">barrierefreiheit@bnetza.de</a>
+                  </p>
+                  <p className="flex items-start md:items-center flex-col md:flex-row gap-1 md:gap-0">
+                    <span className="w-24 shrink-0">Site web :</span>
+                    <a href="https://www.bundesnetzagentur.de/barrierefreiheit" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline transition-colors break-all">www.bundesnetzagentur.de/barrierefreiheit</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AccessibilityPage_FR;
