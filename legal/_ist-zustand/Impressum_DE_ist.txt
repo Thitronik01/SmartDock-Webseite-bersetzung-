@@ -1,0 +1,69 @@
+QUELLE: apps/web/src/pages/ImpressumPage.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+// Listen for language changes and route accordingly
+Impressum - SMARTDOCK
+}]} className="mb-4" />
+}} animate={{
+}} transition={{
+}} className="mb-16 mt-8">
+Impressum
+Angaben gemäß § 5 TMG und rechtliche Hinweise
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+Gesetzliche Anbieterkennung
+### Unternehmensangaben
+Thitronik GmbH
+Finkenweg 9-15
+24340 Eckernförde
+Deutschland
+### Geschäftsführung:
+Mark Thietje
+Daniela Hierl
+### Kontaktinformationen
++49 (0) 4351 76744-0
++49 (0) 4351 76744-112
+E-Mail:
+smartock@thitronik.de
+www.smartdock.de
+### Handelsregistereintrag
+### Umsatzsteuer-Identifikationsnummer
+DE 268454642
+### WEEE-Registrierungsnummer
+Registrierungsnummer für Elektro- und Elektronik-Altgeräte:
+DE33826840
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+## SMARTDOCK Kontaktinformationen
+Für Anfragen zu SMARTDOCK Produkten und Dienstleistungen
++49 4351 767440
+E-Mail:
+smartdock@thitronik.de
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+Berufshaftpflichtversicherung
+Carsten A. Höneise e.K.
+Versicherungsmakler und Versicherungsberater
+Die Berufshaftpflichtversicherung gilt weltweit.
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+Zusätzliche Hinweise
+### Verbraucherstreitbeilegung / Universalschiedsverfahren
+Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.
+### Haftungsausschluss
+Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+Alle genannten Marken, Produktnamen und Logos (einschließlich, aber nicht beschränkt auf Volvo Penta, MerCruiser, Mercury, Yamaha, EPT, Quick, Sleipner, Vetus, Lewmar und Max Power) sind eingetragene Marken oder Marken der jeweiligen Rechteinhaber. Zwischen der Thitronik GmbH und den jeweiligen Markeninhabern bestehen keine geschäftlichen Verbindungen, Partnerschaften oder Autorisierungen, sofern nicht ausdrücklich anders angegeben. Die Nennung der Markennamen erfolgt ausschließlich zur Beschreibung der technischen Kompatibilität der SMARTDOCK/THITRONIK® Produkte.
+### Haftung für Links
+Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+### Urheberrecht
+Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors oder Schöpfers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+}} animate={{
+}} transition={{
+}} className="w-full pt-8">
+Weitere rechtliche Informationen finden Sie in unserer Datenschutzerklärung und den Allgemeinen Geschäftsbedingungen .

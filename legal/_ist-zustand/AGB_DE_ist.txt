@@ -1,0 +1,53 @@
+QUELLE: apps/web/src/pages/AGBPage.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+Allgemeine Geschäftsbedingungen & Kundeninformationen
+Rechtliche Rahmenbedingungen und wichtige Informationen für den Kauf, die Installation und die Nutzung unserer SMARTDOCK Produkte.
+Teil I: Allgemeine Geschäftsbedingungen
+### § 1 Grundlegende Bestimmungen
+(1) Die nachstehenden Geschäftsbedingungen gelten für Verträge, die Sie mit uns als Anbieter (Thitronik GmbH) über die Internetseite smartdock.de oder im direkten Kontakt anbahnen und abschließen. Soweit nicht anders vereinbart, wird der Einbeziehung gegebenenfalls von Ihnen verwendeter eigener Bedingungen widersprochen.
+(2) Verbraucher im Sinne der nachstehenden Regelungen ist jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können. Unternehmer ist jede natürliche oder juristische Person oder eine rechtsfähige Personengesellschaft, die bei Abschluss eines Rechtsgeschäfts in Ausübung ihrer selbständigen beruflichen oder gewerblichen Tätigkeit handelt.
+### § 2 Anfragen über die Internetseite und Zustandekommen eines Vertrages
+(1) Gegenstand unserer Leistungen ist die Bereitstellung, Konfiguration und Installation des SMARTDOCK Systems sowie zugehöriger Komponenten für Sportboote und Yachten.
+(2) Die Präsentation unserer Leistungen auf der Internetseite (insbesondere im Konfigurator) stellt kein rechtlich bindendes Angebot zum Abschluss eines Vertrages dar, sondern eine unverbindliche Aufforderung zur Abgabe einer Anfrage durch den Kunden.
+(3) Durch das Absenden des Konfigurator-Formulars oder über unsere sonstigen Kontaktformulare geben Sie eine unverbindliche Anfrage an uns ab. Auf Basis dieser Anfrage prüfen wir oder unsere zertifizierten Einbaupartner die technische Machbarkeit und erstellen Ihnen ein verbindliches Angebot.
+(4) Der Vertrag kommt erst zustande, wenn Sie dieses verbindliche Angebot ausdrücklich (z.B. per E-Mail, Fax oder Post) annehmen oder durch die Unterzeichnung eines separaten Installations- und Kaufvertrages mit einem unserer Einbaupartner.
+### § 3 Inhalte der Internetseite
+(1) Wir übernehmen keine Gewähr für die Aktualität, Richtigkeit, Vollständigkeit oder Qualität der bereitgestellten Informationen auf unserer Website. Haftungsansprüche gegen uns, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern unsererseits kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.
+(2) Alle aus dem Konfigurator generierten Preisschätzungen sind Richtwerte (UVP). Die tatsächlichen Kosten können je nach individueller Bootsbeschaffenheit und spezifischem Installationsaufwand abweichen.
+### § 4 Preise, Zahlungsbedingungen, Lieferung und Installation
+(1) Alle auf der Website genannten Preise stellen unverbindliche Preisempfehlungen in Euro dar und beinhalten die gesetzliche Mehrwertsteuer (sofern nicht anders als Netto-Preise für Unternehmer ausgewiesen).
+(2) Die Zahlungsbedingungen sowie Modalitäten zur Lieferung und Installation werden im jeweiligen verbindlichen Angebot detailliert geregelt. In der Regel ist die Installation durch geschultes Fachpersonal unserer zertifizierten Händler zwingend vorgeschrieben, um eine fehlerfreie Funktion in sicherheitsrelevanten maritime Umgebungen zu gewährleisten.
+### § 5 Gewährleistung
+(1) Es bestehen die gesetzlichen Mängelhaftungsrechte.
+(2) Bei Unternehmern gilt abweichend: Als Beschaffenheit der Ware gelten nur unsere eigenen Angaben und die Produktbeschreibung des Herstellers als vereinbart, nicht jedoch sonstige Werbung, öffentliche Anpreisungen und Äußerungen des Herstellers. Die Gewährleistungsfrist beträgt für Unternehmer ein Jahr ab Ablieferung der Ware.
+(3) Wir haften nicht für Schäden, die auf eine unsachgemäße Selbstinstallation oder auf Eingriffe durch nicht von uns autorisiertes Personal zurückzuführen sind. Das SMARTDOCK System greift tief in die Steuerungselektronik des Bootes ein; eine fehlerhafte Montage kann erhebliche Folgeschäden verursachen.
+### § 6 Rechtswahl, Erfüllungsort, Gerichtsstand
+(1) Es gilt deutsches Recht. Bei Verbrauchern gilt diese Rechtswahl nur, soweit hierdurch der durch zwingende Bestimmungen des Rechts des Staates des gewöhnlichen Aufenthaltes des Verbrauchers gewährte Schutz nicht entzogen wird (Günstigkeitsprinzip).
+(2) Erfüllungsort für alle Leistungen aus den mit uns bestehenden Geschäftsbeziehungen sowie Gerichtsstand ist unser Sitz (Eckernförde), soweit Sie nicht Verbraucher, sondern Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen sind.
+(3) Die Bestimmungen des UN-Kaufrechts finden ausdrücklich keine Anwendung.
+Teil II: Kundeninformationen
+### 1. Identität des Anbieters
+Verantwortlich für den Inhalt dieser Website und Ihr Vertragspartner im Falle eines direkten Vertragsschlusses ist:
+Thitronik GmbH
+Finkenweg 9-15
+24340 Eckernförde
+Deutschland
++49 4351 767440
+E-Mail:
+smartdock@thitronik.de
+### 2. Informationen zur Anfrage und zum Vertragsschluss
+Die technischen Schritte zum Vertragsschluss, der Vertragsschluss selbst und die Korrekturmöglichkeiten erfolgen nach Maßgabe der Regelungen "Zustandekommen eines Vertrages" (vgl. § 2 der Allgemeinen Geschäftsbedingungen - Teil I).
+### 3. Vertragssprache und Speicherung der Anfrage
+(1) Die Vertragssprache ist Deutsch.
+(2) Die Daten Ihrer Anfrage werden von uns im System gespeichert und an den zuständigen Installationspartner weitergeleitet. Sie erhalten eine Zusammenfassung Ihrer Konfiguration und Anfrage an die von Ihnen angegebene E-Mail-Adresse.
+### 4. Wesentliche Merkmale der Ware oder Dienstleistung
+Die wesentlichen Merkmale des SMARTDOCK Systems (Assistenzsystem für Boots-Manöver, Joystick-Steuerung) und ergänzender Leistungen finden sich in den jeweiligen Produktbeschreibungen und Spezifikationen auf unserer Internetseite.
+### 5. Preise und Zahlungsmodalitäten
+Die auf unserer Website ausgegebenen Konfigurationspreise sind Schätzwerte. Der finale Preis und die akzeptierten Zahlungsmittel ergeben sich aus dem individuellen Angebot, das Ihnen oder Ihrem Händler nach Prüfung Ihrer Bootsdaten übermittelt wird.
+### 6. Lieferung, Installation und Leistungserbringung
+Die Lieferbedingungen, der Liefertermin sowie etwaige Lieferbeschränkungen oder Termine für die Installation an Ihrem Boot werden individuell im Rahmen des Angebotsverfahrens mit unseren zertifizierten Händlern oder direkt mit uns vereinbart.
+### 7. Gesetzliches Mängelhaftungsrecht
+Die Mängelhaftung für unsere Waren richtet sich nach der Regelung "Gewährleistung" in unseren Allgemeinen Geschäftsbedingungen (Teil I).

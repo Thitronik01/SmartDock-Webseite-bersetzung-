@@ -1,0 +1,35 @@
+QUELLE: apps/web/src/pages/AccessibilityPage_EN.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+Accessibility Statement | Smartdock
+Accessibility Statement
+Information about the accessibility of this website and our commitment to digital accessibility.
+1. Introduction
+Thitronik GmbH strives to make its website accessible in accordance with the Act on the Promotion of Accessibility (BFSG) and the Ordinance on the Promotion of Accessibility (BFSGV).
+This accessibility statement applies to the website www.smartdock.de.
+2. Status of Compliance with the Requirements
+Partially compatible
+Due to the following exceptions, this website is partially compliant with the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA and the European Standard EN 301 549.
+3. Non-accessible content
+The content listed below is not yet fully accessible for the following reasons:
+Images and graphics: Some images or graphics are missing alternative text (alt text), or the alternative text provided is not descriptive enough.
+We are constantly working to improve our digital offerings. An external accessibility audit is planned to address the identified issues in a structured manner.
+4. Preparation of This Accessibility Statement
+This statement was prepared on July 9, 2025.
+This assessment is based on an internal self-evaluation of the website and its features.
+5. Feedback and Contact Information
+Have you noticed any issues with accessible access to content on www.smartdock.de? Or do you have questions about accessibility? If so, please feel free to contact us:
+Thitronik GmbH
+Finkenweg 9-15
+24340 Eckernförde
+kontakt@thitronik.de
+6. Enforcement Proceedings
+If you have not received a response—or have not received a satisfactory response—after contacting us, you may contact the mediation office established under the Disability Equality Act (BGG) at the Federal Network Agency.
+The mediation board is responsible for resolving conflicts between people with disabilities and private entities (companies) out of court.
+Conciliation Board under the Federal Arbitration Act (BFSG) at the Federal Network Agency
+Tulpenfeld 4
+53113 Bonn
+barrierefreiheit@bnetza.de
+www.bundesnetzagentur.de/barrierefreiheit

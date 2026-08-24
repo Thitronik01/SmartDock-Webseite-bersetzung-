@@ -1,0 +1,36 @@
+QUELLE: apps/web/src/pages/AccessibilityPage.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+Erklärung zur Barrierefreiheit
+Informationen über die Zugänglichkeit dieser Website und unser Engagement für digitale Barrierefreiheit.
+1. Einleitung
+Die Thitronik GmbH ist bemüht, ihre Website im Einklang mit dem Barrierefreiheitsstärkungsgesetz (BFSG) sowie der Barrierefreiheitsstärkungsverordnung (BFSGV) barrierefrei zugänglich zu machen.
+Diese Erklärung zur Barrierefreiheit gilt für die Website www.smartdock.de.
+2. Stand der Vereinbarkeit mit den Anforderungen
+Teilweise vereinbar
+Diese Website ist wegen der folgenden Ausnahmen teilweise mit den Web Content Accessibility Guidelines (WCAG) 2.1 Level AA und der Europäischen Norm EN 301 549 vereinbar.
+3. Nicht barrierefreie Inhalte
+Die nachstehend aufgeführten Inhalte sind aus den folgenden Gründen noch nicht vollständig barrierefrei:
+Bilder und Grafiken: Bei einigen Bildern oder Grafiken fehlen alternative Texte (Alt-Texte) oder diese sind nicht ausreichend aussagekräftig.
+Wir arbeiten kontinuierlich an der Verbesserung unserer digitalen Angebote. Ein externes Audit zur Barrierefreiheit ist geplant, um die identifizierten Mängel strukturiert zu beheben.
+4. Erstellung dieser Erklärung zur Barrierefreiheit
+Diese Erklärung wurde am 9. Juli 2025 erstellt.
+Die Einschätzung basiert auf einer internen Selbstbewertung der Website und ihrer Funktionen.
+5. Feedback und Kontaktangaben
+Sind Ihnen Mängel beim barrierefreien Zugang zu Inhalten von www.smartdock.de aufgefallen? Oder haben Sie Fragen zum Thema Barrierefreiheit? Dann können Sie sich gerne an uns wenden:
+Thitronik GmbH
+Finkenweg 9-15
+24340 Eckernförde
+E-Mail:
+kontakt@thitronik.de
+6. Durchsetzungsverfahren
+Sollten Sie nach einer Kontaktaufnahme mit uns keine oder keine zufriedenstellende Antwort erhalten haben, können Sie sich an die Schlichtungsstelle nach dem Behindertengleichstellungsgesetz (BGG) bei der Bundesnetzagentur wenden.
+Die Schlichtungsstelle hat die Aufgabe, Konflikte zwischen Menschen mit Behinderungen und nicht-öffentlichen Stellen (Unternehmen) außergerichtlich beizulegen.
+Schlichtungsstelle gemäß BFSG bei der Bundesnetzagentur
+Tulpenfeld 4
+53113 Bonn
+E-Mail:
+barrierefreiheit@bnetza.de
+www.bundesnetzagentur.de/barrierefreiheit

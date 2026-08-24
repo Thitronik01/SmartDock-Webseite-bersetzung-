@@ -1,0 +1,32 @@
+QUELLE: apps/web/src/pages/VersandbedingungPage_EN.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+"Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic",
+"Denmark", "Estonia", "Finland", "France", "Germany", "Greece",
+"Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg",
+"Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia",
+"Slovenia", "Spain", "Sweden"
+Shipping & Payment Terms
+Clear information about our delivery areas, delivery times, and your payment options.
+Shipping Costs
+Free
+No shipping charges (including sales tax).
+Delivery Areas
+We currently deliver to Germany and the following European Union countries:
+Delivery Times
+Standard Delivery Times
+Domestic (Germany): 3 - 5 days after contract conclusion.
+In the case of agreed prepayment, the period begins after the date of your payment instruction.
+Important Information About Delivery
+Please note that there are no deliveries on Sundays and public holidays.
+If you ordered items with different delivery times, we will ship the goods in a combined shipment, unless we have made alternative arrangements with you.
+In this case, the delivery time is determined by the item with the longest delivery time that you have ordered.
+Accepted Payment Methods
+Prepayment by bank transfer
+Payment by Invoice
+PayPal
+### More details about payment
+The invoice amount must be settled within 14 days when paying by invoice.
+If you have any questions, you can find our contact details in the Legal Notice .

@@ -1,0 +1,72 @@
+QUELLE: apps/web/src/pages/ImpressumPage_EN.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+// Listen for language changes and route accordingly
+Legal Notice - SMARTDOCK
+Legal Notice
+}]} className="mb-4" />
+}} animate={{
+}} transition={{
+}} className="mb-16 mt-8">
+Legal Notice
+Information pursuant to Section 5 of the German Telemedia Act (TMG) and Legal Notices
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+Legal Provider Information
+### Company Information
+Thitronik GmbH
+Finkenweg 9-15
+24340 Eckernförde
+Germany
+### Management
+Mark Thietje
+Daniela Hierl
+### Contact Information
++49 (0) 4351 76744-0
++49 (0) 4351 76744-112
+E-Mail:
+kontakt@thitronik.de
+www.smartdock.de
+Service appointments are available only by prior telephone arrangement.
+### Commercial Register
+Commercial Register Entry: HRB 11453 KI
+Kiel Municipal Court
+### Value-Added Tax (VAT) Identification Number
+### WEEE Registration number
+Registration number for waste electrical and electronic equipment: DE33826840
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+## SMARTDOCK Contact Information
+For inquiries about SMARTDOCK products and services
++49 4351 767440
+E-Mail:
+smartdock@thitronik.de
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+Professional Liability Insurance
+Insurance companies:
+Carsten A. Höneise e.K.
+Insurance Brokers and Insurance Advisors
+Professional liability insurance is valid worldwide.
+}} animate={{
+}} transition={{
+}} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+Additional Notes
+### Consumer Dispute Resolution / Universal Arbitration Proceedings
+We do not participate in dispute resolution proceedings before a consumer arbitration board.
+### Disclaimer
+As a service provider, we are responsible for our own content on these pages in accordance with Section 7(1) of the German Telemedia Act (TMG) and general laws. However, pursuant to Sections 8 through 10 of the TMG, we, as a service provider, are not obligated to monitor third-party information that is transmitted or stored, nor are we required to investigate circumstances that indicate illegal activity.
+All trademarks, product names, and logos mentioned (including, but not limited to, Volvo Penta, MerCruiser, Mercury, Yamaha, EPT, Quick, Sleipner, Vetus, Lewmar, and Max Power) are registered trademarks or trademarks of their respective owners. Unless expressly stated otherwise, there are no business relationships, partnerships, or authorizations between Thitronik GmbH and the respective trademark owners. The brand names are mentioned solely to describe the technical compatibility of SMARTDOCK/THITRONIK® products.
+### Liability for Links
+Our website contains links to external third-party websites over whose content we have no control. Therefore, we cannot assume any liability for this third-party content. The respective provider or operator of the linked sites is always responsible for their content. The linked sites were reviewed for possible legal violations at the time the links were created. No illegal content was apparent at the time the links were created.
+### Copyright
+The content and works on these pages created by the site operators are subject to German copyright law. Reproduction, adaptation, distribution, and any other form of use beyond the scope of copyright law require the written consent of the author or creator. Downloads and copies of this site are permitted only for private, non-commercial use.
+}} animate={{
+}} transition={{
+}} className="w-full pt-8">
+For further legal information, please refer to our Privacy Policy and Terms and Conditions .

@@ -1,0 +1,32 @@
+QUELLE: apps/web/src/pages/VersandbedingungPage.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+"Belgien", "Bulgarien", "Dänemark", "Deutschland", "Estland", "Finnland",
+"Frankreich", "Griechenland", "Irland", "Italien", "Kroatien", "Lettland",
+"Litauen", "Luxemburg", "Malta", "Niederlande", "Österreich", "Polen",
+"Portugal", "Rumänien", "Schweden", "Slowakei", "Slowenien", "Spanien",
+"Tschechien", "Ungarn", "Zypern"
+Versand- und Zahlungsbedingungen
+Transparente Informationen zu unseren Liefergebieten, Lieferfristen sowie Ihren Zahlungsmöglichkeiten.
+Versandkosten
+Kostenlos
+Keine Versandkosten berechnet (inklusive gesetzliche Mehrwertsteuer).
+Liefergebiete
+Wir liefern aktuell nach Deutschland und in die folgenden Länder der Europäischen Union:
+Lieferfristen
+Reguläre Lieferzeiten
+Inland (Deutschland): 3 - 5 Tage nach Vertragsschluss.
+Bei vereinbarter Vorauszahlung beginnt die Frist nach dem Zeitpunkt Ihrer Zahlungsanweisung.
+Wichtige Hinweise zur Zustellung
+Beachten Sie, dass an Sonn- und Feiertagen keine Zustellung erfolgt.
+Haben Sie Artikel mit unterschiedlichen Lieferzeiten bestellt, versenden wir die Ware in einer gemeinsamen Sendung, sofern wir keine abweichenden Vereinbarungen mit Ihnen getroffen haben.
+In diesem Fall bestimmt sich die Lieferzeit nach dem Artikel mit der längsten Lieferzeit, den Sie bestellt haben.
+Akzeptierte Zahlungsmöglichkeiten
+Vorkasse per Überweisung
+Zahlung per Rechnung
+PayPal
+### Weitere Einzelheiten zur Zahlung
+Der Rechnungsbetrag ist bei Zahlung auf Rechnung innerhalb von 14 Tagen auszugleichen.
+Bei Fragen finden Sie unsere Kontaktdaten im Impressum .

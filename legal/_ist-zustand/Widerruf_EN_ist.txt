@@ -1,0 +1,56 @@
+QUELLE: apps/web/src/pages/WiderrufsbelehrungPage_EN.jsx
+Automatisch extrahierter IST-Zustand des sichtbaren Seitentexts.
+Nur zur inhaltlichen Pruefung gegen eure Rechtsdokumente - kein Rechtstext-Original.
+========================================================================
+
+Right of Withdrawal Policy | SMARTDOCK
+Right of Withdrawal Policy
+Information about your statutory right of withdrawal, the time limits, the consequences of a withdrawal, and the sample withdrawal form.
+1. Right of Withdrawal for Consumers
+A consumer is any natural person who enters into a legal transaction for purposes that are predominantly neither commercial nor their independent professional activity.
+Consumers are entitled to the statutory right of withdrawal described below.
+2. Right of Withdrawal
+You have the right to withdraw from this contract within fourteen days without giving any reason.
+The withdrawal period is fourteen days from the day:
+on which you, or a third party designated by you who is not the carrier, took possession of the goods, provided you ordered one or more goods as part of a uniform order and these are delivered uniformly;
+on which you, or a third party designated by you who is not the carrier, took possession of the last good, provided you ordered several goods as part of a single order and these are delivered separately.
+3. Exercising the Right of Withdrawal
+To exercise your right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g., a letter sent by post or an e-mail). You may use the attached sample withdrawal form, but it is not obligatory.
+Thitronik GmbH
+Finkenweg 11–15
+24340 Eckernförde
+Germany
+To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.
+4. Consequences of the Revocation
+If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than 14 days from the day on which we are informed about your decision to withdraw from this contract.
+We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement.
+We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.
+5. Returning the Goods
+You shall send back the goods or hand them over to us, without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us.
+The deadline is met if you send back the goods before the period of 14 days has expired.
+You will have to bear the direct cost of returning the goods.
+6. Compensation for Loss of Value
+You are only liable for any diminished value of the goods resulting from the handling other than what is necessary to establish the nature, characteristics and functioning of the goods.
+7. Exclusion of the Right of Withdrawal
+The right of withdrawal does not apply to contracts:
+for the supply of goods that are not prefabricated and the production of which is governed by an individual choice or decision by the consumer, or which are clearly tailored to personal needs;
+for the supply of goods if, due to their nature, they were inseparably mixed with other items after delivery (e.g., after fixed installation in a boat);
+for the supply of sealed audio or video recordings or computer software which were unsealed after delivery.
+8. Sample Cancellation Form
+(If you wish to withdraw from the contract, please complete this form and return it to us.)
+Print Form
+Thitronik GmbH
+Finkenweg 11–15
+24340 Eckernförde
+Germany
+I/we (*) hereby give notice that I/we (*) withdraw from my/our (*) contract of sale of the following goods (*)/for the provision of the following service (*):
+Exact description of goods / services
+Please enter the item numbers or descriptions here...
+Ordered on (*)
+Received on (*)
+Name of consumer(s)
+Address of consumer(s)
+Date
+Signature of consumer(s) (only if notified on paper)
+(*) Delete as appropriate.
+Print Form
