@@ -1,0 +1,234 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { 
+  Truck, 
+  MapPin, 
+  Calendar, 
+  CreditCard, 
+  Building, 
+  FileText, 
+  Globe,
+  PackageCheck,
+  Wallet
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { Card, CardContent } from "@/components/ui/card.jsx";
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const DELIVERY_COUNTRIES = [
+  "Österreich", "Belgien", "Bulgarien", "Kroatien", "Zypern", "Tschechien",
+  "Dänemark", "Estland", "Finnland", "Frankreich", "Deutschland", "Griechenland",
+  "Ungarn", "Irland", "Italien", "Lettland", "Litauen", "Luxemburg", "Malta",
+  "Niederlande", "Polen", "Portugal", "Rumänien", "Slowakei", "Slowenien",
+  "Spanien", "Schweden"
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const VersandbedingungPage_EN = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="en" />
+        <title>{`Payment and dispatch - SMARTDOCK`}</title>
+        <meta name="description" content="Information on delivery areas, dispatch costs, delivery periods and payment options at SMARTDOCK." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Home', path: '/en' },
+            { label: 'Payment and dispatch', path: '/en/shipping' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <Truck className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Payment and dispatch
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            The following terms and conditions apply:
+          </p>
+        </motion.div>
+
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-12"
+        >
+          {/* Section 1: Delivery areas */}
+          <motion.div variants={itemVariants}>
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="p-2.5 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Globe className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground tracking-tight">
+                Delivery areas
+              </h2>
+            </div>
+            
+            <Card className="border border-border shadow-sm overflow-hidden">
+              <CardContent className="p-0">
+                <div className="p-6 border-b border-border bg-muted/20">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Domestic delivery (Germany) and following countries:
+                  </p>
+                </div>
+                <div className="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                  {DELIVERY_COUNTRIES.map((country, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-sm font-medium text-foreground/90">
+                      <MapPin className="w-4 h-4 text-primary/60 shrink-0" />
+                      <span>{country}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Section 2: Dispatch costs */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-2 border-primary/20 bg-primary/5 shadow-none overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
+              <CardContent className="p-8 md:p-12 flex flex-col md:flex-row items-center gap-6">
+                <div className="p-4 bg-primary/20 rounded-full text-primary shrink-0">
+                  <PackageCheck className="w-8 h-8" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground tracking-tight mb-2">
+                    Dispatch costs (inclusive of legally applicable VAT)
+                  </h2>
+                  <p className="text-lg text-foreground/80 font-medium">
+                    We do not charge any shipping costs.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Section 3: Delivery periods */}
+          <motion.div variants={itemVariants}>
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="p-2.5 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Calendar className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground tracking-tight">
+                Delivery periods
+              </h2>
+            </div>
+
+            <Card className="border border-border shadow-sm">
+              <CardContent className="p-6 md:p-8 space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Unless otherwise specified in the quote, domestic delivery of goods shall be made (Germany) within 3 - 5 days, for deliveries abroad within 5 - 7 days from conclusion of contract (if advance payment agreed from the date of the payment instruction).
+                </p>
+                <p>
+                  Please note that deliveries are not made on Sundays and other holidays.
+                </p>
+                <p>
+                  If you have ordered articles with different delivery dates, we send the articles together in one delivery if no other agreement has been made. The delivery date for the complete order will be the same as that of the article with the longest delivery time.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Section 4: Accepted Payment options */}
+          <motion.div variants={itemVariants}>
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="p-2.5 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <CreditCard className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground tracking-tight">
+                Accepted Payment options
+              </h2>
+            </div>
+            
+            <div className="grid sm:grid-cols-3 gap-6 mb-8">
+              <Card className="border border-border shadow-sm hover:border-primary/50 transition-colors duration-300">
+                <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center text-foreground">
+                    <Building className="w-6 h-6" />
+                  </div>
+                  <span className="font-medium text-foreground">Prepayment via transfer</span>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border shadow-sm hover:border-primary/50 transition-colors duration-300">
+                <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center text-foreground">
+                    <FileText className="w-6 h-6" />
+                  </div>
+                  <span className="font-medium text-foreground">Payment by invoice</span>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border shadow-sm hover:border-primary/50 transition-colors duration-300">
+                <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center text-foreground">
+                    <CreditCard className="w-6 h-6" />
+                  </div>
+                  <span className="font-medium text-foreground">PayPal</span>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Section 5: Further details on payment */}
+            <Card className="border border-border shadow-sm bg-accent/5">
+              <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <Wallet className="w-6 h-6" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-semibold text-lg text-foreground">Further details on payment</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The invoice amount is to be settled at the time of payment on invoice within 14 days.
+                  </p>
+                  <p className="text-sm text-muted-foreground pt-2">
+                    In case of questions, please contact us at the contact details mentioned in the <Link to="/en/imprint" className="text-primary hover:underline font-medium">Legal Notice</Link>.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default VersandbedingungPage_EN;
