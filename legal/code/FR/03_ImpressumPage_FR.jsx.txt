@@ -1,0 +1,155 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { Scale, Shield, AlertCircle } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+const ImpressumPage_FR = () => {
+  // Listen for language changes and route accordingly
+  useLanguageRouting();
+  useScrollRestoration();
+  return <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="fr" />
+        <title>Mentions légales - SMARTDOCK</title>
+        <meta name="description" content="Indicateur légal d'éditeur de Thitronik GmbH." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb items={[{
+        label: 'Accueil',
+        path: '/fr'
+      }, {
+        label: 'Mentions légales',
+        path: '/fr/mentions-legales'
+      }]} className="mb-4" />
+
+        {/* Hero Section */}
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }} className="mb-16 mt-8">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <Scale className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{
+          letterSpacing: '-0.02em'
+        }}>
+            Mentions légales
+          </h1>
+        </motion.div>
+
+        <div className="space-y-8">
+          {/* Indicateur légal d'éditeur */}
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.1
+        }} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                <Scale className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                Indicateur légal d'éditeur
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <div className="space-y-1">
+                <p className="font-medium text-foreground text-lg">Thitronik GmbH</p>
+                <p>représenté par le directeur : Mark Thietje</p>
+                <p>Finkenweg 11-15</p>
+                <p>24340 Eckernförde</p>
+                <p>Allemagne</p>
+              </div>
+
+              <div className="space-y-1">
+                <p>Téléphone: <a href="tel:04351767440" className="text-primary hover:underline transition-colors">04351767440</a></p>
+                <p>Téléfax: 0435176744127</p>
+                <p>E-Mail: <a href="mailto:smartdock@thitronik.de" className="text-primary hover:underline transition-colors">smartdock@thitronik.de</a></p>
+              </div>
+
+              <div className="space-y-1">
+                <p>N° d'identification TVA: DE268454642</p>
+                <p>Inscrit au le registre de commerce du tribunal de commerce Kiel</p>
+                <p>Numéro de registre de commerce HRB 11453</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Assurance responsabilité professionnelle */}
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <div className="p-3 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Shield className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                Assurance responsabilité professionnelle
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <div className="space-y-1">
+                <p className="font-medium text-foreground">Carsten A. Höneise e.K.</p>
+                <p>Zweiter Steg 4</p>
+                <p>24340</p>
+                <p>Eckernförde</p>
+              </div>
+
+              <p>Champ d'application national de l'assurance responsabilité professionnelle: weltweit außer USA, Kanada und USA Territorien</p>
+            </div>
+          </motion.div>
+
+          {/* Autres informations légales */}
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.5,
+          delay: 0.3
+        }} className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+            <div className="flex items-center space-x-4 border-b border-border pb-6 mb-8">
+              <div className="p-3 bg-muted rounded-lg text-muted-foreground">
+                <AlertCircle className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                Autres informations légales
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>l'autorité de régulation compétente pour les services de médias audiovisuels :</p>
+              <p>Nous ne sommes pas prêts, et ne sommes pas tenus, de participer à une procédure de règlement des litiges devant un organisme de conciliation pour les consommateurs.</p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>;
+};
+export default ImpressumPage_FR;
