@@ -1,0 +1,320 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { 
+  RefreshCcw, 
+  AlertCircle, 
+  Clock, 
+  DollarSign, 
+  XCircle, 
+  FileText,
+  Printer
+} from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion.jsx";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card.jsx";
+import { Button } from "@/components/ui/button.jsx";
+import { Input } from "@/components/ui/input.jsx";
+import { Textarea } from "@/components/ui/textarea.jsx";
+import { Label } from "@/components/ui/label.jsx";
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const WiderrufsbelehrungPage = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20 print:pt-0 print:bg-white">
+      <Helmet>
+        <html lang="de-DE" />
+        <title>{`Widerrufsrecht - SMARTDOCK`}</title>
+        <meta name="description" content="Widerrufsrecht für den Verkauf von Waren, Widerrufsbelehrung und Muster-Widerrufsformular der Thitronik GmbH." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 print:px-0 print:max-w-none">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Startseite', path: '/' },
+            { label: 'Widerrufsrecht', path: '/widerrufsbelehrung' }
+          ]} 
+          className="mb-4 print:hidden"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 mt-8 print:mb-6"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6 print:hidden">
+            <RefreshCcw className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground print:text-black" style={{ letterSpacing: '-0.02em' }}>
+            Widerrufsrecht für den Verkauf von Waren
+          </h1>
+        </motion.div>
+
+        <div className="space-y-8 print:space-y-4">
+
+          {/* Widerrufsrecht für Verbraucher */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Card className="border border-border shadow-sm print:border-black print:shadow-none">
+              <CardContent className="p-6 md:p-10 print:p-0">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                    <AlertCircle className="w-5 h-5" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-foreground tracking-tight print:text-black">
+                    Widerrufsrecht für Verbraucher
+                  </h2>
+                </div>
+                <p className="text-muted-foreground leading-relaxed print:text-black">
+                  (Verbraucher ist jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbstständigen beruflichen Tätigkeit zugerechnet werden können.)
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Widerrufsbelehrung */}
+          <div className="bg-card border border-border rounded-3xl p-6 md:p-10 shadow-sm print:border-none print:shadow-none print:p-0">
+            <h2 className="text-3xl font-bold text-foreground tracking-tight mb-8 print:text-black">
+              Widerrufsbelehrung
+            </h2>
+
+            <Accordion type="multiple" defaultValue={["item-1", "item-2", "item-3"]} className="w-full space-y-4">
+              
+              {/* Widerrufsrecht */}
+              <AccordionItem value="item-1" className="border border-border rounded-xl px-6 bg-background/50 data-[state=open]:bg-background transition-colors print:border-none print:px-0">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                      <Clock className="w-5 h-5" />
+                    </div>
+                    <span className="text-xl font-semibold">Widerrufsrecht</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 print:text-black">
+                  <p className="mb-4">
+                    Sie haben das Recht, binnen eines Monats ohne Angabe von Gründen diesen Vertrag zu widerrufen.
+                  </p>
+                  <p className="mb-4">
+                    Die Widerrufsfrist beträgt einen Monat ab dem Tag,
+                  </p>
+                  <ul className="space-y-3 mb-4 pl-1">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die Waren in Besitz genommen haben bzw. hat, sofern Sie eine oder mehrere Waren im Rahmen einer einheitlichen Bestellung bestellt haben und diese einheitlich geliefert wird bzw. werden;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen haben bzw. hat, sofern Sie mehrere Waren im Rahmen einer einheitlichen Bestellung bestellt haben und diese getrennt geliefert werden;</span>
+                    </li>
+                  </ul>
+                  <p className="mb-4">
+                    Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Thitronik GmbH, Finkenweg 11-15, 24340 Eckernförde, Telefonnr.: +494351767440, E-Mail-Adresse: smartdock@thitronik.de) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder eine E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.
+                  </p>
+                  <p>
+                    Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Folgen des Widerrufs */}
+              <AccordionItem value="item-2" className="border border-border rounded-xl px-6 bg-background/50 data-[state=open]:bg-background transition-colors print:border-none print:px-0">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                      <DollarSign className="w-5 h-5" />
+                    </div>
+                    <span className="text-xl font-semibold">Folgen des Widerrufs</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 print:text-black">
+                  <p className="mb-4">
+                    Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen 14 Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.
+                  </p>
+                  <p className="mb-4">
+                    Wir können die Rückzahlung verweigern, bis wir die Waren wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.
+                  </p>
+                  <p className="mb-4">
+                    Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen 14 Tagen ab dem Tag, an dem Sie uns über den Widerruf dieses Vertrags unterrichten, an uns oder an Thitronik GmbH, Finkenweg 9-15, 24340 Eckernförde zurückzusenden oder zu übergeben. Die Frist ist gewahrt, wenn Sie die Waren vor Ablauf der Frist von 14 Tagen absenden.
+                  </p>
+                  <p className="mb-4">
+                    Sie tragen die unmittelbaren Kosten der Rücksendung der Waren.
+                  </p>
+                  <p>
+                    Sie müssen für einen etwaigen Wertverlust der Waren nur aufkommen, wenn dieser Wertverlust auf einen zur Prüfung der Beschaffenheit, Eigenschaften und Funktionsweise der Waren nicht notwendigen Umgang mit ihnen zurückzuführen ist.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Ausschluss- bzw. Erlöschensgründe */}
+              <AccordionItem value="item-3" className="border border-border rounded-xl px-6 bg-background/50 data-[state=open]:bg-background transition-colors print:border-none print:px-0">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                      <XCircle className="w-5 h-5" />
+                    </div>
+                    <span className="text-xl font-semibold">Ausschluss- bzw. Erlöschensgründe</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 print:text-black">
+                  <p className="mb-4">Das Widerrufsrecht besteht nicht bei Verträgen</p>
+                  <ul className="space-y-3 mb-6 pl-1">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>zur Lieferung von Waren, die nicht vorgefertigt sind und für deren Herstellung eine individuelle Auswahl oder Bestimmung durch den Verbraucher maßgeblich ist oder die eindeutig auf die persönlichen Bedürfnisse des Verbrauchers zugeschnitten sind;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>zur Lieferung von Waren, die schnell verderben können oder deren Verfallsdatum schnell überschritten würde;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>zur Lieferung alkoholischer Getränke, deren Preis bei Vertragsschluss vereinbart wurde, die aber frühestens 30 Tage nach Vertragsschluss geliefert werden können und deren aktueller Wert von Schwankungen auf dem Markt abhängt, auf die der Unternehmer keinen Einfluss hat;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>zur Lieferung von Zeitungen, Zeitschriften oder Illustrierten mit Ausnahme von Abonnement-Verträgen.</span>
+                    </li>
+                  </ul>
+
+                  <p className="mb-4">Das Widerrufsrecht erlischt vorzeitig bei Verträgen</p>
+                  <ul className="space-y-3 pl-1">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>zur Lieferung versiegelter Waren, die aus Gründen des Gesundheitsschutzes oder der Hygiene nicht zur Rückgabe geeignet sind, wenn ihre Versiegelung nach der Lieferung entfernt wurde;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>zur Lieferung von Waren, wenn diese nach der Lieferung aufgrund ihrer Beschaffenheit untrennbar mit anderen Gütern vermischt wurden;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>zur Lieferung von Ton- oder Videoaufnahmen oder Computersoftware in einer versiegelten Packung, wenn die Versiegelung nach der Lieferung entfernt wurde.</span>
+                    </li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+            </Accordion>
+          </div>
+
+          {/* Muster-Widerrufsformular */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="pt-8 print:pt-4 print:break-inside-avoid"
+          >
+            <Card className="border-2 border-border shadow-lg print:border-black print:shadow-none">
+              <CardHeader className="bg-muted/30 border-b border-border pb-8 print:bg-transparent print:border-black">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-primary text-primary-foreground rounded-xl shadow-sm print:hidden">
+                      <FileText className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl">Muster-Widerrufsformular</CardTitle>
+                      <CardDescription className="text-base mt-2">
+                        (Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)
+                      </CardDescription>
+                    </div>
+                  </div>
+                  <Button variant="outline" onClick={handlePrint} className="hidden md:flex gap-2 print:hidden">
+                    <Printer className="w-4 h-4" />
+                    Drucken
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent className="p-6 md:p-10">
+                <div className="max-w-3xl space-y-8">
+                  
+                  {/* Recipient Info */}
+                  <div className="p-6 bg-muted/40 rounded-xl border border-border print:border-none print:p-0 print:bg-transparent">
+                    <p className="leading-relaxed">
+                      An Thitronik GmbH, Finkenweg 11-15, 24340 Eckernförde, E-Mail-Adresse: smartdock@thitronik.de :
+                    </p>
+                  </div>
+
+                  <div className="text-lg font-medium leading-relaxed">
+                    Hiermit widerrufe(n) ich/ wir (*) den von mir/ uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/ die Erbringung der folgenden Dienstleistung (*)
+                  </div>
+
+                  {/* Form Fields (Visual Template) */}
+                  <div className="space-y-6">
+                    <div className="space-y-3">
+                      <Textarea 
+                        id="goods" 
+                        className="min-h-[120px] resize-none print:border-black"
+                      />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label htmlFor="orderDate" className="text-base">Bestellt am (*)/ erhalten am (*)</Label>
+                      <Input id="orderDate" className="print:border-black" />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label htmlFor="consumerName" className="text-base">Name des/ der Verbraucher(s)</Label>
+                      <Input id="consumerName" className="print:border-black" />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label htmlFor="consumerAddress" className="text-base">Anschrift des/ der Verbraucher(s)</Label>
+                      <Input id="consumerAddress" className="print:border-black" />
+                    </div>
+
+                    <div className="pt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <div className="h-12 border-b-2 border-dashed border-muted-foreground/50 print:border-black"></div>
+                        <Label className="text-sm text-muted-foreground">Unterschrift des/ der Verbraucher(s) (nur bei Mitteilung auf Papier)</Label>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="h-12 border-b-2 border-dashed border-muted-foreground/50 print:border-black"></div>
+                        <Label className="text-sm text-muted-foreground">Datum</Label>
+                      </div>
+                    </div>
+
+                    <p className="text-sm text-muted-foreground pt-4 border-t border-border print:border-black">
+                      (*) Unzutreffendes streichen.
+                    </p>
+                  </div>
+
+                  <div className="pt-6 print:hidden">
+                    <Button onClick={handlePrint} className="w-full md:w-auto gap-2">
+                      <Printer className="w-4 h-4" />
+                      Formular ausdrucken
+                    </Button>
+                  </div>
+
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WiderrufsbelehrungPage;
