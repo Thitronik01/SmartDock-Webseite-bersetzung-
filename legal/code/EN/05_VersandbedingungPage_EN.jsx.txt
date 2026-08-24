@@ -20,11 +20,11 @@ import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
 
 const DELIVERY_COUNTRIES = [
-  "Österreich", "Belgien", "Bulgarien", "Kroatien", "Zypern", "Tschechien",
-  "Dänemark", "Estland", "Finnland", "Frankreich", "Deutschland", "Griechenland",
-  "Ungarn", "Irland", "Italien", "Lettland", "Litauen", "Luxemburg", "Malta",
-  "Niederlande", "Polen", "Portugal", "Rumänien", "Slowakei", "Slowenien",
-  "Spanien", "Schweden"
+  "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic",
+  "Denmark", "Estonia", "Finland", "France", "Germany", "Greece",
+  "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta",
+  "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia",
+  "Spain", "Sweden"
 ];
 
 const containerVariants = {
