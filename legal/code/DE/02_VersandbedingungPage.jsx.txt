@@ -1,0 +1,234 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { 
+  Truck, 
+  MapPin, 
+  Calendar, 
+  CreditCard, 
+  Building, 
+  FileText, 
+  Globe,
+  PackageCheck,
+  Wallet
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { Card, CardContent } from "@/components/ui/card.jsx";
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const LIEFERLAENDER = [
+  "Österreich", "Belgien", "Bulgarien", "Kroatien", "Zypern", "Tschechien",
+  "Dänemark", "Estland", "Finnland", "Frankreich", "Deutschland", "Griechenland",
+  "Ungarn", "Irland", "Italien", "Lettland", "Litauen", "Luxemburg", "Malta",
+  "Niederlande", "Polen", "Portugal", "Rumänien", "Slowakei", "Slowenien",
+  "Spanien", "Schweden"
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const VersandbedingungPage = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="de-DE" />
+        <title>{`Zahlung und Versand - SMARTDOCK`}</title>
+        <meta name="description" content="Informationen zu Liefergebieten, Versandkosten, Lieferfristen und Zahlungsmöglichkeiten bei SMARTDOCK." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Startseite', path: '/' },
+            { label: 'Zahlung und Versand', path: '/versandbedingungen' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <Truck className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Zahlung und Versand
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            Es gelten folgende Bedingungen:
+          </p>
+        </motion.div>
+
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-12"
+        >
+          {/* Section 1: Liefergebiete */}
+          <motion.div variants={itemVariants}>
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="p-2.5 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Globe className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground tracking-tight">
+                Liefergebiete
+              </h2>
+            </div>
+            
+            <Card className="border border-border shadow-sm overflow-hidden">
+              <CardContent className="p-0">
+                <div className="p-6 border-b border-border bg-muted/20">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Die Lieferung erfolgt im Inland (Deutschland) und in die nachstehenden Länder:
+                  </p>
+                </div>
+                <div className="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                  {LIEFERLAENDER.map((country, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-sm font-medium text-foreground/90">
+                      <MapPin className="w-4 h-4 text-primary/60 shrink-0" />
+                      <span>{country}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Section 2: Versandkosten */}
+          <motion.div variants={itemVariants}>
+            <Card className="border-2 border-primary/20 bg-primary/5 shadow-none overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
+              <CardContent className="p-8 md:p-12 flex flex-col md:flex-row items-center gap-6">
+                <div className="p-4 bg-primary/20 rounded-full text-primary shrink-0">
+                  <PackageCheck className="w-8 h-8" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground tracking-tight mb-2">
+                    Versandkosten (inklusive gesetzliche Mehrwertsteuer)
+                  </h2>
+                  <p className="text-lg text-foreground/80 font-medium">
+                    Wir berechnen keine Versandkosten.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Section 3: Lieferfristen */}
+          <motion.div variants={itemVariants}>
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="p-2.5 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Calendar className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground tracking-tight">
+                Lieferfristen
+              </h2>
+            </div>
+
+            <Card className="border border-border shadow-sm">
+              <CardContent className="p-6 md:p-8 space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Soweit im jeweiligen Angebot keine andere Frist angegeben ist, erfolgt die Lieferung der Ware im Inland (Deutschland) innerhalb von 3 - 5 Tagen, bei Auslandslieferungen innerhalb von 5 - 7 Tagen nach Vertragsschluss (bei vereinbarter Vorauszahlung nach dem Zeitpunkt Ihrer Zahlungsanweisung).
+                </p>
+                <p>
+                  Beachten Sie, dass an Sonn- und Feiertagen keine Zustellung erfolgt.
+                </p>
+                <p>
+                  Haben Sie Artikel mit unterschiedlichen Lieferzeiten bestellt, wird die Ware in einer gemeinsamen Sendung versandt, sofern wir keine abweichenden Vereinbarungen mit Ihnen getroffen haben. Die Lieferzeit bestimmt sich in diesem Fall nach dem Artikel mit der längsten Lieferzeit den Sie bestellt haben.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Section 4: Akzeptierte Zahlungsmöglichkeiten */}
+          <motion.div variants={itemVariants}>
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="p-2.5 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <CreditCard className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground tracking-tight">
+                Akzeptierte Zahlungsmöglichkeiten
+              </h2>
+            </div>
+            
+            <div className="grid sm:grid-cols-3 gap-6 mb-8">
+              <Card className="border border-border shadow-sm hover:border-primary/50 transition-colors duration-300">
+                <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center text-foreground">
+                    <Building className="w-6 h-6" />
+                  </div>
+                  <span className="font-medium text-foreground">Vorkasse per Überweisung</span>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border shadow-sm hover:border-primary/50 transition-colors duration-300">
+                <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center text-foreground">
+                    <FileText className="w-6 h-6" />
+                  </div>
+                  <span className="font-medium text-foreground">Zahlung per Rechnung</span>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border shadow-sm hover:border-primary/50 transition-colors duration-300">
+                <CardContent className="p-6 flex flex-col items-center text-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center text-foreground">
+                    <CreditCard className="w-6 h-6" />
+                  </div>
+                  <span className="font-medium text-foreground">PayPal</span>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Section 5: Weitere Einzelheiten zur Zahlung */}
+            <Card className="border border-border shadow-sm bg-accent/5">
+              <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <Wallet className="w-6 h-6" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-semibold text-lg text-foreground">Weitere Einzelheiten zur Zahlung</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Der Rechnungsbetrag ist bei Zahlung auf Rechnung innerhalb von 14 Tagen auszugleichen.
+                  </p>
+                  <p className="text-sm text-muted-foreground pt-2">
+                    Bei Fragen finden Sie unsere Kontaktdaten im <Link to="/impressum" className="text-primary hover:underline font-medium">Impressum</Link>.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default VersandbedingungPage;
