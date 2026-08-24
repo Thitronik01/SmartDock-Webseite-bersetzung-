@@ -1,0 +1,100 @@
+www.haendlerbund.de1
+Anwaltlich erstellt i.A. der HB legal tech GmbH (Stand: 16.06.2025) Dieser Text ist urheberrechtlich geschützt.  
+Eine Vervielfältigung oder Weitergabe des Hinweisblattes an Dritte ist zulässig, soweit hieran keine Änderungen vorgenommen werden und insbesondere der Urheberhinweis nicht entfernt wird.
+Einstellhinweise Rechtstexte für den 
+Online-Shop
+Für den Verkauf über deinen Online-Shop stellen wir dir die folgenden Rechtstexte zur Verfügung:
+ » Impressum
+ » AGB und Kundeninformationen
+ » Widerrufsbelehrung einschließlich Muster-Widerrufsformular
+ » Datenschutzerklärung
+ » Zahlung und Versand
+ » Batteriehinweis (soweit du Batterien/Starterbatterien/Fahrzeugbatterien und/oder Produkte mit eingebauten Batterien 
+verkaufst)
+ » Verpackungshinweis (soweit du deine Waren oder einen Teil deiner Waren in nicht systembeteiligungspflichtigen Verpa-
+ckungen versendest - z.B. Paletten)
+1. Einstellen der Rechtstexte
+Bitte richte in der ohne weiteres ersichtlichen Navigation deines Online-Shops separate Schaltflächen mit entsprechenden 
+Bezeichnungen für die obenstehenden Rechtstexte-Dateien ein (oder benenne bei Bedarf schon vorhandene Schaltflächen 
+um) und setze die Rechtstexte unter den jeweiligen Schaltflächen ein.
+Für die Widerrufsbelehrung einschließlich Muster-Widerrufsformular richte bitte eine Schaltfläche mit der Bezeichnung „Wi-
+derrufsrecht“ ein.
+Soweit du mehrere Widerrufsbelehrungen in deinem Online-Shop verwenden musst, empfiehlt es sich, diese unter der Schalt-
+fläche „Widerrufsrecht“ jeweils mit einem „Anker“ oder Textmarker zu versehen, über den die einzelnen Widerrufsbelehrungen 
+/ Muster-Widerrufsformulare durch Anklicken aufgerufen werden können, zum Beispiel unter Verwendung folgender Über-
+schriften:
+ » Widerrufsbelehrung für den Verkauf von Waren / Muster-Widerrufsformular
+ » Widerrufsbelehrung für digitale Inhalte / Muster-Widerrufsformular
+ » Widerrufsbelehrung für Dienstleistungen / Muster-Widerrufsformular
+Alternativ kannst du auch die folgenden Formulierungen verwenden:
+ » Widerrufsrecht für Waren
+ » Widerrufsrecht für digitale Inhalte
+ » Widerrufsrecht für Dienstleistungen
+2. Einstellen der Pflichtinformationen zur Barrierefreiheit
+Als wichtiger Hinweis vorab:
+Online-Shops von sogenannten Kleinstunternehmen müssen nicht barrierefrei sein. Das heißt, Kleinstunternehmer benötigen 
+keine AGB-Regelung und keine Erklärung zur Barrierefreiheit.
+www.haendlerbund.de2
+Anwaltlich erstellt i.A. der HB legal tech GmbH (Stand: 16.06.2025) Dieser Text ist urheberrechtlich geschützt.  
+Eine Vervielfältigung oder Weitergabe des Hinweisblattes an Dritte ist zulässig, soweit hieran keine Änderungen vorgenommen werden und insbesondere der Urheberhinweis nicht entfernt wird.
+Ein „Kleinstunternehmen“ ist ein Unternehmen, das weniger als zehn Personen beschäftigt und das entweder einen Jahresum-
+satz von höchstens 2 Millionen Euro erzielt oder dessen Jahresbilanzsumme sich auf höchstens 2 Millionen Euro beläuft.
+Wenn dein Unternehmen kein Kleinstunternehmen ist, musst du die gesetzlichen Barrierefreiheitsanforderungen in dei-
+nem Online-Shop erfüllen. Insbesondere musst du eine Erklärung zum aktuellen Stand der Barrierefreiheit deines Shops 
+(sogenannte Barrierefreiheitserklärung) bereitstellen.
+Parallel zu der Barrierefreiheitserklärung ist in den AGB des Shops eine Regelung zum Thema Barrierefreiheit zu verwenden. 
+Die AGB und Kundeninformationen für deinen Online-Shop, die wir dir als Rechtstexte-Datei zur Verfügung stellen, enthält die 
+entsprechende AGB-Regelung in § 2.
+Für deine Barrierefreiheitserklärung richte bitte in der ohne weiteres ersichtlichen Navigation deines Online-Shops eine sepa-
+rate Schaltfläche mit der Bezeichnung „Barrierefreiheit“ oder „Barrierefreiheitserklärung“ ein und setze darunter die Barriere-
+freiheitserklärung ein. In § 2 der AGB und Kundeninformationen wird auf diese Schaltfläche verwiesen.
+In deiner Barrierefreiheitserklärung  musst du die Besucher deines Online-Shops darüber informieren, wie deine Webseite 
+bzw. deine Dienstleistung im elektronischen Geschäftsverkehr die gesetzlichen Barrierefreiheitsanforderungen erfüllt. Folgen-
+de Punkte müssen abgedeckt werden:
+ » eine Beschreibung der geltenden Anforderungen an die Barrierefreiheit;
+ » eine allgemeine Beschreibung der Dienstleistung in einem barrierefreien Format;
+ » Beschreibungen und Erläuterungen, die zum Verständnis der Durchführung der Dienstleistung erforderlich sind;
+ » eine Beschreibung, wie die Dienstleistung die einschlägigen Barrierefreiheitsanforderungen erfüllt;
+ » die Angabe der zuständigen Marktüberwachungsbehörde. (Diese Angabe findet sich auch in § 2 der AGB und Kundenin-
+formationen, die wir dir als Rechtstexte-Datei für deinen Online-Shop zur Verfügung stellen.)
+Zur Erstellung deiner individuellen Barrierefreiheitserklärung  nutze bitte das folgende, kostenfreie Angebot auf dem HB 
+Marketplace: https://hb-marketplace.com/products/barrierefreiheitserklaerung-fuer-webseiten-online-shops.
+Die Erstellung erfolgt im Wege der Beantwortung der Abfragen im Musterschreiben-Assistenten.
+3. Allgemeine Hinweise
+a) Artikelbeschreibungen
+In den Artikelbeschreibungen selbst sind keine Rechtstexte, wie z.B.: Allgemeine Geschäftsbedingungen, Widerrufsbeleh -
+rungen oder sonstige Informationen zu Fernabsatzverträgen aufzunehmen, um Widersprüche und rechtliche Fehler zu ver-
+meiden. Bitte nutze die Artikelbeschreibungen ausschließlich für die Benennung der wesentlichen Merkmale des jeweiligen 
+Artikels.
+b) Versandbedingungen/Versandkosten
+Die Preisangabenverordnung schreibt vor, dass die Versandkosten am Gesamtpreis anzugeben sind. Daher muss die Angabe 
+der Versandkosten vollständig für alle angebotenen Versandoptionen und alle Länder, in die du versendest, auf einem Blick 
+mit dem Artikelpreis erfolgen. Hierfür gibt es im Online-Shop üblicherweise die Verlinkung „zzgl. Versand“ oder „zzgl. Versand-
+kosten“ am Artikelpreis auf die Seite mit den Versandbedingungen.
+Die näheren Einzelheiten zu den Versandangaben im Onlinehandel findest du in unserem Hinweisblatt unter:  
+https://hb-marketplace.com/products/versandangaben-plattformen-hinweisblatt 
+www.haendlerbund.de3
+Anwaltlich erstellt i.A. der HB legal tech GmbH (Stand: 16.06.2025) Dieser Text ist urheberrechtlich geschützt.  
+Eine Vervielfältigung oder Weitergabe des Hinweisblattes an Dritte ist zulässig, soweit hieran keine Änderungen vorgenommen werden und insbesondere der Urheberhinweis nicht entfernt wird.
+c) Kennzeichnungspflichten
+Gegebenenfalls gibt es besondere Kennzeichnungspflichten für die Produkte, die du verkaufst. Du findest entsprechende 
+Hinweisblätter unter: https://hb-marketplace.com/collections/hinweisblatter 
+Dort findest du auch weitere Hinweisblätter zur Preisangabe, Angabe von Grundpreisen, Werbung mit reduzierten Preisen u. 
+Sonderangeboten etc.
+d) Hinweise zur Batterieentsorgung
+Soweit du Batterien/Starterbatterien/Fahrzeugbatterien und/oder Produkte mit eingebauten Batterien verkaufst, sind gesetz-
+liche Hinweispflichten zu erfüllen.
+Wie du diese Hinweispflichten umsetzt, entnimm bitte den detaillierten Hinweisblättern unter:
+https://hb-marketplace.com/products/verkauf-batterien-hinweisblatt 
+https://hb-marketplace.com/products/handel-fahrzeugbatterien-hinweisblatt 
+e) Hinweise zur Rücknahmepflicht für Verpackungsmaterial
+Soweit du deine Waren oder einen Teil deiner Waren in nicht systembeteiligungspflichtigen Verpackungen versendest, sind 
+gesetzliche Hinweispflichten zu erfüllen.
+Wie du diese Hinweispflichten umsetzt, entnimm bitte den detaillierten Hinweisblättern unter:
+https://hb-marketplace.com/products/faq-verpackungsgesetz-hinweisblatt 
+https://hb-marketplace.com/products/wissenswertes-verpackungsgesetz-whitepaper 
+WICHTIGE HINWEISE:
+Bitte stelle sicher, dass die vorstehenden Hinweise vollständig umgesetzt werden.
+Beachte, dass die Rechtstexte ausschließlich für den Verkauf über einen Online-Shop verwendet werden können.
+Diese Einstellhinweise für die Rechtstexte dienen nicht der Rechtsberatung dazu, ob oder wie ein rechtssicherer 
+Verkauf über den Online-Shop möglich ist. Es handelt sich lediglich um Einstellhinweise für die Rechtstexte.
