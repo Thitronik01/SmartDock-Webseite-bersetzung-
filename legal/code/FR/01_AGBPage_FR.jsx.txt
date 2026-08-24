@@ -1,0 +1,285 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { FileText, Scale, Info } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const AGBPage_FR = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="fr" />
+        <title>{`Conditions générales de vente - SMARTDOCK`}</title>
+        <meta name="description" content="Conditions générales de vente et informations clients de Thitronik GmbH pour SMARTDOCK." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Accueil', path: '/fr' },
+            { label: 'CGV', path: '/fr/cgv' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <FileText className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Conditions générales de vente et informations clients
+          </h1>
+        </motion.div>
+
+        <div className="space-y-12">
+          {/* PARTIE I - CGV */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-10"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6">
+              <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                <Scale className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                I. Conditions générales de vente
+              </h2>
+            </div>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 1 Dispositions fondamentales</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Les Conditions générales suivantes s'appliquent pour tous les contrats que vous concluez avec nous en tant que vendeur (Thitronik GmbH) sur la page Internet <a href="https://www.smartdock.de" className="text-primary hover:underline">www.smartdock.de</a>. Sauf stipulation contraire, nous contestons l’intégration de vos propres conditions éventuelles.
+                </p>
+                <p>
+                  (2) Un consommateur au sens des présents règlements est toute personne physique, qui effectue une transaction dans un but qui n’est dans le cadre ni de son activité commerciale, ni de son activité professionnelle indépendante. Un entrepreneur est toute personne physique ou juridique ou une société de personnes ayant la capacité juridique qui agit dans l’exercice de son activité commerciale ou professionnelle indépendante.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 2 Aboutissement du contrat</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) L'objet du contrat est la vente de marchandises.
+                </p>
+                <p>
+                  Nos offres en ligne sont sans engagement et ne sont pas une offre ferme en vue de la conclusion d'un contrat.
+                </p>
+                <p>
+                  (2) Vous pouvez faire une offre d'achat ferme (commande) via le système de « panier d'achat en ligne ».
+                </p>
+                <p>
+                  Les marchandises que vous souhaitez acheter sont alors placées dans le « panier ». Le bouton correspondant dans la barre de navigation vous permet d'accéder au « panier » et d'y apporter des modifications à tout moment. Après avoir cliqué sur le bouton « Caisse » ou « Poursuivre la commande » (ou désignation similaire) et saisi les données personnelles ainsi que les conditions de paiement et d'envoi, les données de la commande s'affichent finalement sous forme d'aperçu de la commande.
+                </p>
+                <p>
+                  Avant d’envoyer la commande, vous avez la possibilité d’y vérifier à nouveau les détails de la commande, de les modifier (également via la fonction « Retour » du navigateur Internet) ou d’annuler la commande.
+                </p>
+                <p>
+                  En envoyant votre commande via le bouton correspondant (« commande avec obligation de paiement », « acheter » / « acheter maintenant », « commande payante » ou désignation similaire), vous nous faites parvenir une offre ferme.
+                </p>
+                <p>
+                  Vous recevez d’abord un email automatique concernant la réception de votre commande qui ne conduit pas encore à la conclusion du contrat.
+                </p>
+                <p>
+                  (3) L'acceptation de la présente offre (et ainsi la conclusion du contrat) est effectuée en l’espace de 2 jours par une confirmation sous forme de texte (par ex. email) dans laquelle l'exécution de la commande ou de la livraison de la marchandise vous est confirmée (confirmation de commande).
+                </p>
+                <p>
+                  Si vous n'avez pas reçu de confirmation, vous n'êtes plus lié à cette commande. Le cas échéant, les paiements versés seront immédiatement remboursés.
+                </p>
+                <p>
+                  (4) Les questions relatives à l’établissement de l’offre que vous nous avez transmises sont sans engagement pour vous. Nous vous soumettons à ce propos une offre ferme sous forme de texte (par ex. par email) que vous pouvez accepter dans un délai de 5 jours.
+                </p>
+                <p>
+                  (5) Le déroulement de la commande et la transmission de toutes les informations nécessaires en rapport avec la conclusion du contrat s’effectue par email et est en partie automatisé. Vous devez donc vous assurez que l’adresse email que vous nous avez transmise est correcte, la réception des emails est garantie techniquement et qu’elle n’est pas bloquée notamment par un filtre anti-spam.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 3 Droit de rétention, réserve de propriété</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Vous ne pouvez exercer un droit de rétention que si les prétentions résultent de la même relation contractuelle.
+                </p>
+                <p>
+                  (2) La marchandise reste notre propriété jusqu'au paiement intégral du prix de vente.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 4 Garanties légales</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Les droits de garantie légaux sont applicables.
+                </p>
+                <p>
+                  (2) En tant que consommateur, vous êtes prié de vérifier sans délai l’exhaustivité, les vices apparents et les dommages dus au transport de la marchandise lors de sa livraison et de faire part des réclamations à notre entreprise et à l’expéditeur le plus rapidement possible. Si vous n’obtempérez pas, cela n’a aucun effet sur vos droits légaux de garantie.
+                </p>
+                <p>
+                  (3) Dans la mesure où une caractéristique de la marchandise ne correspond pas aux exigences objectives, l’écart n'est considéré comme convenu que si nous vous avons informé de cet écart avant la soumission de déclaration de contrat et si l'écart a été convenu expressément et séparément entre les parties contractantes.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 5 Choix juridique, lieu d'exécution, tribunal compétent</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Le droit allemand fait foi. Pour les consommateurs, ce choix juridique ne s’applique que s'il ne porte pas atteinte à la protection garantie par les lois impératives du pays dans lequel le consommateur réside de façon régulière (principe de faveur).
+                </p>
+                <p>
+                  (2) Le lieu d'exécution pour toutes les prestations issues des relations commerciales existantes avec nous et le tribunal compétent sont celui de notre siège, si vous n’êtes pas un consommateur, mais un commerçant, une personne juridique de droit public ou un établissement public ayant un budget spécial. Ceci est également valable si vous n’avez pas de lieu de juridiction général en Allemagne ou dans l’UE ou si le domicile ou le lieu de résidence habituel n’est pas connu au moment de l'introduction du recours. Le droit de saisir aussi le tribunal d’une autre juridiction légale reste intact.
+                </p>
+                <p>
+                  (3) L'application des dispositions de la Convention de Vienne est expressément exclue.
+                </p>
+              </div>
+            </section>
+          </motion.div>
+
+          {/* PARTIE II - Informations clients */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-10"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6">
+              <div className="p-3 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Info className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                II. Informations clients
+              </h2>
+            </div>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">1. Identité du vendeur</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="space-y-1">
+                  <p className="font-medium text-foreground">Thitronik GmbH</p>
+                  <p>Finkenweg 11-15</p>
+                  <p>24340 Eckernförde</p>
+                  <p>Allemagne</p>
+                </div>
+                <div className="space-y-1">
+                  <p>Téléphone: <a href="tel:04351767440" className="text-primary hover:underline">04351767440</a></p>
+                  <p>E-Mail: <a href="mailto:smartdock@thitronik.de" className="text-primary hover:underline">smartdock@thitronik.de</a></p>
+                </div>
+                <p>
+                  Nous ne sommes pas prêts, et ne sommes pas tenus, de participer à une procédure de règlement des litiges devant un organisme de conciliation pour les consommateurs.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">2. Informations sur l’aboutissement du contrat</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Les étapes techniques associées à la conclusion du contrat, la conclusion du contrat elle-même et les options de correction sont exécutés conformément à la réglementation "Conclusion du contrat" dans nos termes commerciaux standards (partie I.).
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">3. Langue du contrat, enregistrement des textes du contrat</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  3.1 La langue du contrat est le français.
+                </p>
+                <p>
+                  3.2 Nous n’enregistrons pas le texte intégral du contrat. Avant l’envoi de la commande via la ligne - achats système de panier les données du contrat peuvent être imprimées ou sécurisées électroniquement par la fonction d’impression du navigateur. Dès la réception de la commande, nous vous envoyons de nouveau par email les données de la commande, les informations légales prescrites pour les contrats de vente à distance et les Conditions générales de vente.
+                </p>
+                <p>
+                  3.3 Pour toutes les demandes d’offres transmises sans passer par le système en ligne de panier, vous recevrez toutes les données contractuelles dans le cadre d’une offre ferme rédigée par écrit et transmise, par exemple, par e-mail. Vous pourrez l’imprimer ou l’enregistrer par voie électronique.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">4. Caractéristiques essentielles de la marchandise ou de la prestation</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Les caractéristiques essentielles de la marchandise et/ou de la prestation de service sont mentionnées dans l’offre respective.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">5. Prix et modalités de paiement</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  5.1 Les prix indiqués dans les offres respectives ainsi que les frais d’envoi constituent les prix globaux. Ils contiennent toutes les composantes de prix, y compris toutes les taxes exigibles.
+                </p>
+                <p>
+                  5.2 Aucun frais de livraison n'est facturé.
+                </p>
+                <p>
+                  5.3 Si la livraison est effectuée dans des pays en dehors de l'Union Européenne, vous devez endosser des frais supplémentaires éventuels dont nous n'avons pas à réponse, ex. droits de douane, impôts et taxes de transfert d'argent (frais de virement ou de cours du change des instituts de crédit).
+                </p>
+                <p>
+                  5.4 Vous devez endosser les frais échus du transfert d'argent également dans les cas où la livraison est effectuée dans un État membre de l'UE tandis que le paiement a été initié en dehors de l'Union Européenne.
+                </p>
+                <p>
+                  5.5 Les options de paiement disponibles sont indiquées en cliquant sur un bouton désigné à cet effet et situé sur notre site Internet ou dans l’offre respective.
+                </p>
+                <p>
+                  5.6 Sauf indications contraires sur les modes de paiements, les créances issues du contrat conclu sont exigibles immédiatement.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">6. Conditions de livraison</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  6.1 Les conditions de livraison, la date de livraison et les éventuelles restrictions en vigueur lors de la livraison sont indiquées en cliquant sur un bouton désigné à cet effet et situé sur notre site Internet ou dans l’offre respective.
+                </p>
+                <p>
+                  6.2 Si vous êtes un consommateur, il est stipulé par la loi que le risque de la disparition fortuite et de la détérioration fortuite pendant l’envoi de la marchandise vendue vous est transféré au moment où la marchandise vous est remise, peu importe que l’envoi soit assuré ou non. Cela ne s’applique pas si vous avez mandaté de manière autonome une entreprise de transport que nous avons nommée ou une personne désignée pour l’exécution de l’envoi.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">7. Droit de garantie pour les défauts</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  La responsabilité pour vices dépend de la disposition "Garanties légales" dans nos Conditions Générales de Vente (Partie I).
+                </p>
+              </div>
+            </section>
+
+            <div className="pt-6 border-t border-border">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Ces CGV et les informations clients ont été établies par des juristes spécialisés dans le droit de la technologie de l’information du Händlerbund (association de commerçants en ligne) et leur conformité juridique est contrôlée en permanence. La Händlerbund Management AG garantie la sécurité juridique des textes et se porte garante en cas de mises en demeure. Vous trouverez de plus amples informations sur la page Internet <a href="https://www.haendlerbund.de/de/leistungen/rechtssicherheit/agb-service" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.haendlerbund.de/de/leistungen/rechtssicherheit/agb-service</a>.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AGBPage_FR;
