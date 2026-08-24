@@ -1,0 +1,297 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { Shield } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const PrivacyPage_FR = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="fr" />
+        <title>Déclaration de protection des données - SMARTDOCK</title>
+        <meta name="description" content="Déclaration de protection des données et informations sur le traitement des données chez SMARTDOCK." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Breadcrumb */}
+        <Breadcrumb 
+          items={[
+            { label: 'Accueil', path: '/fr' },
+            { label: 'Confidentialité', path: '/fr/confidentialite' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <Shield className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Déclaration de protection des données
+          </h1>
+        </motion.div>
+
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-12"
+        >
+
+          <section>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Sauf indication contraire fournie ci-dessous, la mise à disposition de vos données à caractère personnel n’est ni prescrite par la loi ou le contrat, ni nécessaire pour la conclusion d’un contrat. Vous n’êtes pas obligé(e) de mettre vos données à disposition. Un refus de votre part n’aura aucune conséquence. Cela s’applique uniquement dans la mesure où aucune indication contraire n’est fournie pour les opérations de traitement ci-dessous.
+              </p>
+              <p>
+                Les «données à caractère personnel» correspondent à toutes les informations se rapportant à une personne physique identifiée ou identifiable.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Fichiers journaux du serveur</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Vous pouvez visiter notre site sans fournir des informations personnelles.
+              </p>
+              <p>
+                À chaque accès à notre site Internet, votre navigateur Internet nous transmet, à nous ou à notre hébergeur web / prestataire de service informatique, des données d'utilisation qui sont enregistrées dans des données de protocoles (ce que l’on appelle des fichiers journaux du serveur). On retrouve parmi ses données enregistrées par ex. le nom de la page consultée, la date et l’heure de la consultation, l’adresse IP, le volume de données transférées et le fournisseur de consultation. Le traitement se fait sur la base de l’art. 6 alinéa 1 lettre f RGPD au titre d’un intérêt légitime quant à la garantie d’une exploitation sans faille de notre site Internet et de l’amélioration de notre offre.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Contact</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Responsable</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                N’hésitez pas à nous contacter. Le chargé de traitement des données est: Dipl.-Ing. Karsten Dreyer, Finkenweg 9-15, 24340 Eckernförde Deutschland, <a href="tel:04351767440" className="text-primary hover:underline">04351767440</a>, <a href="mailto:datenschutz@thitronik.de" className="text-primary hover:underline">datenschutz@thitronik.de</a>
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Prise de contact spontanée du client par e-mail</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Si vous nous contactez par e-mail de votre propre initiative, nous ne collecterons vos données à caractère personnel (nom, adresse e-mail, texte du message) que dans la mesure où vous les fournissez. Le traitement des données sert à traiter et à répondre à votre demande de contact.
+              </p>
+              <p>
+                Si la finalité du contact est d'effectuer des démarches précontractuelles (par exemple, conseils en cas d'intérêt d'achat, préparation d'offres) ou s'il s'agit d'un contrat déjà conclu entre vous et nous, ce traitement de données est basé sur l'art. 6 alinéa 1 lettre b RGPD.
+              </p>
+              <p>
+                Si le contact est pris pour d'autres raisons, ce traitement de données est effectué sur la base de l'art. 6 alinéa 1 lettre f RGPD, dans notre intérêt très largement justifié de traiter et de répondre à votre demande. <strong className="text-foreground font-semibold">Dans ce cas, pour des raisons tenant à votre situation particulière, vous avez le droit de vous opposer à tout moment aux traitements de vos données à caractère personnel, lequel est effectué sur la base de l’art. 6 alinéa 1, lettre f du RGPD.</strong>
+              </p>
+              <p>
+                Nous utilisons votre adresse e-mail uniquement afin de traiter votre demande. Vos données seront ensuite supprimées dans le respect des délais de conservation légaux, sauf si vous avez accepté un traitement et une utilisation ultérieurs.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Commandes</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Collecte, traitement et transmission de données personnelles lors de commandes</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Lors de la commande, nous collectons et traitons vos données personnelles uniquement si cela est nécessaire pour l’exécution et le traitement de votre commande ainsi que pour traiter vos demandes. La mise à disposition des données est nécessaire pour la conclusion du contrat. Une non-mise à disposition a pour conséquence qu’aucun contrat ne peut être conclu. Le traitement se fait sur la base de l’art. 6 alinéa 1 lettre b RGPD et est nécessaire pour l’exécution d’un contrat avec vous.
+              </p>
+              <p>
+                Vos données seront partagées, par exemple, avec des entreprises de livraison, des fournisseurs de dropshipping ou de fulfillment, des prestataires de services de paiement, des prestataires pour le traitement des commandes et des prestataires de services informatiques. Dans tous les cas, nous respectons les directives légales à la lettre. L'étendue de la transmission de données est limitée au minimum.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Annonce publicitaire</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Utilisation de l'adresse e-mail pour l'envoi de newsletters</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Nous utilisons votre adresse e-mail pour vous envoyer des informations et des offres par newsletter, dans la mesure où vous y avez expressément consenti. Le traitement des données sert exclusivement à des fins de prospection commerciale. À cet effet, nous traitons votre adresse e-mail ainsi que, le cas échéant, d'autres données que vous avez fournies volontairement dans le cadre de l'inscription à notre newsletter.
+              </p>
+              <p>
+                Le traitement est effectué sur la base de l'article 6, paragraphe 1, point a) du RGPD avec votre consentement. Vous pouvez révoquer votre consentement à tout moment, sans que cela n'affecte la légalité du traitement effectué sur la base du consentement jusqu'à la révocation. Pour ce faire, vous pouvez vous désabonner à tout moment de la newsletter en utilisant le lien correspondant dans la newsletter ou en nous en informant. Votre adresse e-mail sera ensuite supprimée de la liste de diffusion. Malgré la suppression de la liste de diffusion, nous pouvons continuer à enregistrer votre adresse e-mail dans une liste dite noire afin d'éviter que vous ne receviez à l'avenir des e-mails de newsletter de notre part. Ce stockage est effectué sur la base de l'article 6, paragraphe 1, point f du RGPD, pour notre intérêt légitime et le vôtre à empêcher la réutilisation de votre adresse e-mail pour l'envoi de notre newsletter. <strong className="text-foreground font-semibold">Vous avez le droit de vous opposer à tout moment, pour des raisons liées à votre situation particulière, à ce traitement des données à caractère personnel vous concernant.</strong>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Cookies</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Notre site Web utilise des cookies. Les cookies correspondent à de petits fichiers texte enregistrés dans votre navigateur Web ou par votre navigateur Web dans le système informatique d’un utilisateur. Si un utilisateur se rend sur un site Web, alors un cookie est susceptible d’être enregistré sur le système d’exploitation de l’utilisateur. Ce cookie contient une chaîne de caractères spécifique permettant une identification univoque du navigateur lors de la prochaine visite du site Web.
+              </p>
+              <p>
+                Les cookies sont enregistrés sur votre ordinateur. Par conséquent, vous contrôlez entièrement l’utilisation des cookies. En sélectionnant les paramètres techniques correspondants dans votre navigateur Internet, vous pouvez être informé avant l’activation de cookies et décider de les accepter au cas par cas ainsi qu’empêcher l’enregistrement des cookies et la transmission des données qu’ils contiennent. Les cookies déjà enregistrés peuvent être supprimés à tout moment. Nous attirons cependant votre attention sur le fait que vous ne pourrez alors pas utiliser pleinement l’ensemble des fonctionnalités de ce site Web.
+              </p>
+              <p>
+                En cliquant sur les liens ci-dessous, vous trouverez toutes les informations concernant la gestion (entre autres la désactivation) des cookies sur les principaux navigateurs :
+              </p>
+              <div className="space-y-2">
+                <p className="break-words">Navigateur Chrome : <a href="https://support.google.com/accounts/answer/61416?hl=fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.google.com/accounts/answer/61416?hl=fr</a></p>
+                <p className="break-words">Microsoft Edge: <a href="https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-löschen-63947406-40ac-c3b8-57b9-2a946a29ae09</a></p>
+                <p className="break-words">Mozilla Firefox : <a href="https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen</a></p>
+                <p className="break-words">Safari : <a href="https://support.apple.com/de-de/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.apple.com/de-de/guide/safari/manage-cookies-and-website-data-sfri11471/mac</a></p>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Cookies techniquement nécessaires</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Sauf indication contraire dans la déclaration de protection des données ci-dessous, nous utilisons seulement ces cookies afin de rendre nos contenus plus conviviaux, plus efficaces et plus sûrs. Par ailleurs, les cookies permettent à nos systèmes de reconnaître votre navigateur, même après un changement de page, et de vous proposer des services. Certaines fonctionnalités de notre site Internet ne pourraient pas être proposées sans l’utilisation de cookies. Pour qu’elles fonctionnent, il est nécessaire que le navigateur soit reconnu même après un changement de page.
+              </p>
+              <p>
+                L'utilisation de cookies ou de technologies comparables est effectuée sur la base de l'article 25, paragraphe 2 TDDDG. Le traitement se fait sur la base de l’art. 6 alinéa 1 lettre f RGPD au titre d’un intérêt légitime prédominant quant à la garantie d’une fonctionnalité optimale du site Internet et d’une présentation conviviale et efficace de notre offre.
+              </p>
+              <p>
+                <strong className="text-foreground font-semibold">Pour des raisons tenant à votre situation particulière, vous avez le droit de vous opposer à tout moment au traitement de vos données à caractère personnel, lequel est effectué sur la base de l’art. 6 (1) lettre f du RGPD.</strong>
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Utilisation de CookieBot</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Nous utilisons sur notre site Web le Consent Management Tool Cookiebot de Cybot A/S, Havnegade 39, 1058 Copenhague, Danemark ; « Cookiebot »).
+              </p>
+              <p>
+                L'outil vous permet de donner votre consentement au traitement des données via le site Web, en particulier à l'installation de cookies, et d'utiliser votre droit de révocation pour un consentement donné précédemment. Le traitement des données a pour but d'obtenir et de documenter le consentement nécessaire au traitement des données et donc de respecter les obligations légales. Les cookies peuvent être utilisés à cet effet. Entre autres, les informations suivantes peuvent être collectées et transmises à Cookiebot : adresse IP anonymisée, date et heure du consentement, URL à partir de laquelle le consentement a été envoyé, clé anonyme, aléatoire et cryptée, état du consentement. Ces données ne seront pas transmises à des tiers.
+              </p>
+              <p>
+                Le traitement des données est effectué pour remplir une obligation légale sur la base de l'art. 6 alinéa 1 lettre c RGPD.
+              </p>
+              <p className="break-words">
+                Vous trouverez de plus amples informations sur la protection des données chez Cookiebot à l'adresse suivante : <a href="https://www.cookiebot.com/de/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.cookiebot.com/de/privacy-policy/</a>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Analyse</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Utilisation de Google Analytics 4</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Nous utilisons sur notre site web le service d'analyse web Google Analytics de Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irlande ; « Google »).
+              </p>
+              <p>
+                Le traitement des données permet d'analyser ce site web et ses visiteurs pour le marketing et la publicité. À cette fin, Google utilisera les informations obtenues pour le compte de l'exploitant de ce site web afin d'évaluer votre utilisation du site web, de faire des rapports sur les activités du site web et de fournir à l'exploitant du site web d'autres services liés à l'utilisation du site web et d'Internet.
+              </p>
+              <p>
+                Les informations suivantes peuvent notamment être collectées : Adresse IP, date et heure de la consultation de la page, trajectoire de clic, informations sur le navigateur et l'appareil que vous utilisez, pages visitées, URL de référence (site web par lequel vous avez accédé à notre site web), données de localisation, activités d'achat. Google peut associer vos données à d'autres données, telles que votre historique de recherche, vos comptes personnels, vos données d'utilisation d'autres appareils et toutes les autres données que Google détient à votre sujet.
+              </p>
+              <p>
+                L'adresse IP est abrégée au préalable par Google dans les États membres de l'Union européenne ou dans d'autres États signataires de l'accord sur l'Espace économique européen.
+              </p>
+              <p>
+                Google utilise des technologies telles que les cookies, la mémoire web dans le navigateur et les pixels de suivi, qui permettent d'analyser votre utilisation du site web. L'utilisation de cookies ou de technologies comparables s'effectue avec votre consentement sur la base de l'article 25, paragraphe 1, phrase 1 de la loi TDDDG en relation avec l'art. 6 alinéa 1, lettre a du RGPD.
+              </p>
+              <p>
+                Le traitement de vos données personnelles s'effectue avec votre consentement sur la base de l'article 6, paragraphe 1, point a) du RGPD. Vous pouvez désister à tout moment, sans que cela n'affecte la légalité du traitement effectué sur la base du consentement jusqu'au désistement.
+              </p>
+              <p>
+                Les informations ainsi générées sur votre utilisation de ce site web sont généralement transmises à un serveur de Google aux États-Unis où elles sont enregistrées. En ce qui concerne les États-Unis, il existe une décision de la Commission européenne constatant le caractère adéquat : le Cadre transatlantique de protection des données personnelles (CTPD). Google s’est certifié selon le CTPD et est donc tenu de respecter les règles de protection des données européennes. Google et les autorités publiques américaines ont accès à vos données.
+              </p>
+              <p className="break-words">
+                Vous trouverez de plus amples informations sur les conditions d'utilisation et la protection des données sur <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://policies.google.com/technologies/partner-sites</a> et sur <a href="https://policies.google.com/privacy?hl=de&amp;gl=de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://policies.google.com/privacy?hl=de&amp;gl=de</a> et sur <a href="https://business.safety.google/privacy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://business.safety.google/privacy/</a>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Plug-ins</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Utilisation de Google Tag Manager</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p className="break-words">
+                Nous utilisons sur notre site Web le Google Tag Manager de Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irlande; "Google"). Cette application gère les balises JavaScript et les balises HTML utilisées pour implémenter des outils de suivi et d'analyse en particulier. Le traitement des données a pour but de concevoir et d'optimiser notre site web en fonction de vos besoins. Le Google Tag Manager lui-même ne stocke pas de cookies et ne traite pas de données personnelles. Toutefois, il permet de déclencher d'autres balises qui peuvent collecter et traiter des données personnelles. Vous trouverez toutes les informations actuelles sur les conditions d'utilisation et la protection des données à l’adresse <a href="https://www.google.com/intl/de/tagmanager/use-policy.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.google.com/intl/de/tagmanager/use-policy.html</a>
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Utilisation de Cloudfront</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Nous utilisons le réseau de diffusion de contenu Cloudfront CDN d'Amazon Web Services EMEA SARL (38 avenue John F. Kennedy, L-1855, Luxembourg ; « Cloudfront ») sur notre site Web.
+              </p>
+              <p>
+                Il s'agit d'un réseau national de serveurs dans divers centres de données, avec lesquels notre serveur Web se connecte et via lequel certains contenus de notre site Web sont diffusés.
+              </p>
+              <p>
+                Le traitement des données a pour but d'optimiser les temps de chargement de notre site Web et de rendre ainsi notre offre plus conviviale.
+              </p>
+              <p>
+                Entre autres, les informations suivantes peuvent être collectées : adresse IP, informations de configuration du système, informations sur le trafic vers et depuis les sites Web des clients (appelés fichiers journaux du serveur).
+              </p>
+              <p>
+                Vos données peuvent également être transférées aux États-Unis. En ce qui concerne les États-Unis, il existe une décision de la Commission européenne constatant le caractère adéquat : le Cadre transatlantique de protection des données personnelles (CTPD). Cloudfront s’est certifié selon le CTPD et est donc tenu de respecter les règles de protection des données européennes.
+              </p>
+              <p>
+                Ce traitement est effectué sur la base de l’art. 6 alinéa 1 lettre f du RGPD et a pour intérêt légitime d’aménager le site Web en fonction des besoins et de façon ciblée. <strong className="text-foreground font-semibold">Pour des raisons tenant à votre situation particulière, vous avez le droit de vous opposer à tout moment aux traitements de vos données à caractère personnel, lequel est effectué sur la base de l’art. 6, alinéa 1, lettre f du RGPD.</strong>
+              </p>
+              <p className="break-words">
+                Vous pouvez trouver plus d'informations sur la protection des données lors de l'utilisation de Cloudfront sur <a href="https://docs.aws.amazon.com/de_de/AmazonCloudFront/latest/DeveloperGuide/data-protection-summary.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://docs.aws.amazon.com/de_de/AmazonCloudFront/latest/DeveloperGuide/data-protection-summary.html</a> et sur <a href="https://d1.awsstatic.com/legal/aws-gdpr/AWS_GDPR_DPA.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://d1.awsstatic.com/legal/aws-gdpr/AWS_GDPR_DPA.pdf</a>.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Droits des personnes concernées et durée d’enregistrement</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Durée de l’enregistrement</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Après conclusion du contrat, les données sont enregistrées dans un premier temps pour la durée de la période de garantie, puis dans le respect du délai de conservation légal, notamment selon le droit fiscal et du commerce, pour ensuite être supprimées une fois ce délai expiré, dans la mesure où vous n’avez pas consenti à ce qu’elles soient traitées et utilisées ultérieurement.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Droits de la personne concernée</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Si les conditions légales sont remplies, vous bénéficiez des droits suivants conformément aux art. 15 à 20 du RGPD: droit d’obtenir des informations, droit de correction, droit de suppression, droit de limiter le traitement, droit à la portabilité des données.
+              </p>
+              <p>
+                Par ailleurs et conformément à l’art. 21 (1) du RGPD, vous bénéficiez d’un droit d’opposition aux traitements effectués sur la base de l’art. 6 (1) f du RGPD ainsi qu’au traitement à des fins de publipostage.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Droit de recours auprès des autorités de contrôle</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Conformément à l’art. 77 du RGPD, vous avez le droit de vous plaindre auprès des autorités de contrôle si vous estimez que le traitement de vos données à caractère personnel ne respecte pas la législation.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Droit à l’opposition</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Si les traitements des données personnelles indiqués ici reposent sur notre intérêt légitime selon l’art. 6 alinéa 1 lettre f RGPD, vous avez le droit, pour des raisons émanant de votre situation spécifique, de vous opposer à ces traitements à tout moment avec effet pour l’avenir.
+              </p>
+              <p>
+                Après votre opposition, le traitement des données concernées prendra fin à moins que nous puissions prouver qu’il existe des raisons impératives pour le traitement qui prévalent sur vos intérêts, droits et libertés ou si le traitement sert à revendiquer, exercer ou défendre des prétentions légales.
+              </p>
+            </div>
+          </section>
+
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default PrivacyPage_FR;
