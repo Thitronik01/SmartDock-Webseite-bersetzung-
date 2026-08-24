@@ -1,0 +1,285 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { FileText, Scale, Info } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const AGBPage = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="de-DE" />
+        <title>{`AGB und Kundeninformationen - SMARTDOCK`}</title>
+        <meta name="description" content="Allgemeine Geschäftsbedingungen und Kundeninformationen der Thitronik GmbH für SMARTDOCK." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Startseite', path: '/' },
+            { label: 'AGB und Kundeninformationen', path: '/agb' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <FileText className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Allgemeine Geschäftsbedingungen und Kundeninformationen
+          </h1>
+        </motion.div>
+
+        <div className="space-y-12">
+          {/* PART I - AGB */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-10"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6">
+              <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                <Scale className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                I. Allgemeine Geschäftsbedingungen
+              </h2>
+            </div>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 1 Grundlegende Bestimmungen</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Die nachstehenden Geschäftsbedingungen gelten für Verträge, die Sie mit uns als Anbieter (Thitronik GmbH) über die Internetseite <a href="https://www.smartdock.de" className="text-primary hover:underline">www.smartdock.de</a> schließen. Soweit nicht anders vereinbart, wird der Einbeziehung gegebenenfalls von Ihnen verwendeter eigener Bedingungen widersprochen.
+                </p>
+                <p>
+                  (2) Verbraucher im Sinne der nachstehenden Regelungen ist jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden kann. Unternehmer ist jede natürliche oder juristische Person oder eine rechtsfähige Personengesellschaft, die bei Abschluss eines Rechtsgeschäfts in Ausübung ihrer selbständigen beruflichen oder gewerblichen Tätigkeit handelt.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 2 Zustandekommen des Vertrages</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Gegenstand des Vertrages ist der Verkauf von Waren.
+                </p>
+                <p>
+                  Unsere Angebote im Internet sind unverbindlich und kein verbindliches Angebot zum Abschluss eines Vertrages.
+                </p>
+                <p>
+                  (2) Sie können ein verbindliches Kaufangebot (Bestellung) über das Online-Warenkorbsystem abgeben.
+                </p>
+                <p>
+                  Dabei werden die zum Kauf beabsichtigten Waren im „Warenkorb" abgelegt. Über die entsprechende Schaltfläche in der Navigationsleiste können Sie den „Warenkorb" aufrufen und dort jederzeit Änderungen vornehmen. Nach Anklicken der Schaltfläche "Kasse" oder "Weiter zur Bestellung" (oder ähnliche Bezeichnung) und der Eingabe der persönlichen Daten sowie der Zahlungs- und Versandbedingungen werden Ihnen abschließend die Bestelldaten als Bestellübersicht angezeigt.
+                </p>
+                <p>
+                  Vor Absenden der Bestellung haben Sie die Möglichkeit, die Angaben in der Bestellübersicht nochmals zu überprüfen, zu ändern (auch über die Funktion "zurück" des Internetbrowsers) bzw. die Bestellung abzubrechen.
+                </p>
+                <p>
+                  Mit dem Absenden der Bestellung über die entsprechende Schaltfläche ("zahlungspflichtig bestellen", "kaufen" / "jetzt kaufen", "kostenpflichtig bestellen" oder ähnliche Bezeichnung) geben Sie ein verbindliches Angebot bei uns ab.
+                </p>
+                <p>
+                  Sie erhalten zunächst eine automatische E-Mail über den Eingang Ihrer Bestellung, die noch nicht zum Vertragsschluss führt.
+                </p>
+                <p>
+                  (3) Die Annahme des Angebots (und damit der Vertragsabschluss) erfolgt innerhalb von 2 Tagen durch Bestätigung in Textform (z.B. E-Mail), in welcher Ihnen die Ausführung der Bestellung oder Auslieferung der Ware bestätigt wird (Auftragsbestätigung).
+                </p>
+                <p>
+                  Sollten Sie keine entsprechende Nachricht erhalten haben, sind Sie nicht mehr an Ihre Bestellung gebunden. Gegebenenfalls bereits erbrachte Leistungen werden in diesem Fall unverzüglich zurückerstattet.
+                </p>
+                <p>
+                  (4) Ihre Anfragen zur Erstellung eines Angebotes sind für Sie unverbindlich. Wir unterbreiten Ihnen hierzu ein verbindliches Angebot in Textform (z.B. per E-Mail), welches Sie innerhalb von 5 Tagen (soweit im jeweiligen Angebot keine andere Frist ausgewiesen ist) annehmen können.
+                </p>
+                <p>
+                  (5) Die Abwicklung der Bestellung und Übermittlung aller im Zusammenhang mit dem Vertragsschluss erforderlichen Informationen erfolgt per E-Mail zum Teil automatisiert. Sie haben deshalb sicherzustellen, dass die von Ihnen bei uns hinterlegte E-Mail-Adresse zutreffend ist, der Empfang der E-Mails technisch sichergestellt und insbesondere nicht durch SPAM-Filter verhindert wird.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 3 Zurückbehaltungsrecht, Eigentumsvorbehalt</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Ein Zurückbehaltungsrecht können Sie nur ausüben, soweit es sich um Forderungen aus demselben Vertragsverhältnis handelt.
+                </p>
+                <p>
+                  (2) Die Ware bleibt bis zur vollständigen Zahlung des Kaufpreises unser Eigentum.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 4 Gewährleistung</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Es bestehen die gesetzlichen Mängelhaftungsrechte.
+                </p>
+                <p>
+                  (2) Als Verbraucher werden Sie gebeten, die Ware bei Lieferung umgehend auf Vollständigkeit, offensichtliche Mängel und Transportschäden zu überprüfen und uns sowie dem Spediteur Beanstandungen schnellstmöglich mitzuteilen. Kommen Sie dem nicht nach, hat dies keine Auswirkung auf Ihre gesetzlichen Gewährleistungsansprüche.
+                </p>
+                <p>
+                  (3) Soweit ein Merkmal der Ware von den objektiven Anforderungen abweicht, gilt die Abweichung nur dann als vereinbart, wenn Sie vor Abgabe der Vertragserklärung durch uns über selbige in Kenntnis gesetzt wurden und die Abweichung ausdrücklich und gesondert zwischen den Vertragsparteien vereinbart wurde.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 5 Rechtswahl, Erfüllungsort, Gerichtsstand</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) Es gilt deutsches Recht. Bei Verbrauchern gilt diese Rechtswahl nur, soweit hierdurch der durch zwingende Bestimmungen des Rechts des Staates des gewöhnlichen Aufenthaltes des Verbrauchers gewährte Schutz nicht entzogen wird (Günstigkeitsprinzip).
+                </p>
+                <p>
+                  (2) Erfüllungsort für alle Leistungen aus den mit uns bestehenden Geschäftsbeziehungen sowie Gerichtsstand ist unser Sitz, soweit Sie nicht Verbraucher, sondern Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen sind. Dasselbe gilt, wenn Sie keinen allgemeinen Gerichtsstand in Deutschland oder der EU haben oder der Wohnsitz oder gewöhnliche Aufenthalt im Zeitpunkt der Klageerhebung nicht bekannt ist. Die Befugnis, auch das Gericht an einem anderen gesetzlichen Gerichtsstand anzurufen, bleibt hiervon unberührt.
+                </p>
+                <p>
+                  (3) Die Bestimmungen des UN-Kaufrechts finden ausdrücklich keine Anwendung.
+                </p>
+              </div>
+            </section>
+          </motion.div>
+
+          {/* PART II - Kundeninformationen */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-10"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6">
+              <div className="p-3 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Info className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                II. Kundeninformationen
+              </h2>
+            </div>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">1. Identität des Verkäufers</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="space-y-1">
+                  <p className="font-medium text-foreground">Thitronik GmbH</p>
+                  <p>Finkenweg 11-15</p>
+                  <p>24340 Eckernförde</p>
+                  <p>Deutschland</p>
+                </div>
+                <div className="space-y-1">
+                  <p>Telefon: <a href="tel:04351767440" className="text-primary hover:underline">04351767440</a></p>
+                  <p>E-Mail: <a href="mailto:smartdock@thitronik.de" className="text-primary hover:underline">smartdock@thitronik.de</a></p>
+                </div>
+                <p>
+                  Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor Verbraucherschlichtungsstellen teilzunehmen.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">2. Informationen zum Zustandekommen des Vertrages</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Die technischen Schritte zum Vertragsschluss, der Vertragsschluss selbst und die Korrekturmöglichkeiten erfolgen nach Maßgabe der Regelungen "Zustandekommen des Vertrages" unserer Allgemeinen Geschäftsbedingungen (Teil I.).
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">3. Vertragssprache, Vertragstextspeicherung</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  3.1. Vertragssprache ist deutsch.
+                </p>
+                <p>
+                  3.2. Der vollständige Vertragstext wird von uns nicht gespeichert. Vor Absenden der Bestellung über das Online-Warenkorbsystem können die Vertragsdaten über die Druckfunktion des Browsers ausgedruckt oder elektronisch gesichert werden. Nach Zugang der Bestellung bei uns werden die Bestelldaten, die gesetzlich vorgeschriebenen Informationen bei Fernabsatzverträgen und die Allgemeinen Geschäftsbedingungen nochmals per E-Mail an Sie übersandt.
+                </p>
+                <p>
+                  3.3. Bei Angebotsanfragen außerhalb des Online-Warenkorbsystems erhalten Sie alle Vertragsdaten im Rahmen eines verbindlichen Angebotes in Textform übersandt, z.B. per E-Mail, welche Sie ausdrucken oder elektronisch sichern können.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">4. Wesentliche Merkmale der Ware oder Dienstleistung</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Die wesentlichen Merkmale der Ware und/oder Dienstleistung finden sich im jeweiligen Angebot.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">5. Preise und Zahlungsmodalitäten</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  5.1. Die in den jeweiligen Angeboten angeführten Preise sowie die Versandkosten stellen Gesamtpreise dar. Sie beinhalten alle Preisbestandteile einschließlich aller anfallenden Steuern.
+                </p>
+                <p>
+                  5.2. Es fallen keine Versandkosten an.
+                </p>
+                <p>
+                  5.3. Erfolgt die Lieferung in Länder außerhalb der Europäischen Union können von uns nicht zu vertretende weitere Kosten anfallen, wie z.B. Zölle, Steuern oder Geldübermittlungsgebühren (Überweisungs- oder Wechselkursgebühren der Kreditinstitute), die von Ihnen zu tragen sind.
+                </p>
+                <p>
+                  5.4. Entstandene Kosten der Geldübermittlung (Überweisungs- oder Wechselkursgebühren der Kreditinstitute) sind von Ihnen in den Fällen zu tragen, in denen die Lieferung in einen EU-Mitgliedsstaat erfolgt, die Zahlung aber außerhalb der Europäischen Union veranlasst wurde.
+                </p>
+                <p>
+                  5.5. Die Ihnen zur Verfügung stehenden Zahlungsarten sind unter einer entsprechend bezeichneten Schaltfläche auf unserer Internetpräsenz oder im jeweiligen Angebot ausgewiesen.
+                </p>
+                <p>
+                  5.6. Soweit bei den einzelnen Zahlungsarten nicht anders angegeben, sind die Zahlungsansprüche aus dem geschlossenen Vertrag sofort zur Zahlung fällig.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">6. Lieferbedingungen</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  6.1. Die Lieferbedingungen, der Liefertermin sowie gegebenenfalls bestehende Lieferbeschränkungen finden sich unter einer entsprechend bezeichneten Schaltfläche auf unserer Internetpräsenz oder im jeweiligen Angebot.
+                </p>
+                <p>
+                  6.2. Soweit Sie Verbraucher sind, ist gesetzlich geregelt, dass die Gefahr des zufälligen Untergangs und der zufälligen Verschlechterung der verkauften Sache während der Versendung erst mit der Übergabe der Ware an Sie übergeht, unabhängig davon, ob die Versendung versichert oder unversichert erfolgt. Dies gilt nicht, wenn Sie eigenständig ein nicht vom Unternehmer benanntes Transportunternehmen oder eine sonst zur Ausführung der Versendung bestimmte Person beauftragt haben.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">7. Gesetzliches Mängelhaftungsrecht</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Die Mängelhaftung richtet sich nach der Regelung "Gewährleistung" in unseren Allgemeinen Geschäftsbedingungen (Teil I).
+                </p>
+              </div>
+            </section>
+
+            <div className="pt-6 border-t border-border">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Diese AGB und Kundeninformationen wurden von den auf IT-Recht spezialisierten Juristen des Händlerbundes erstellt und werden permanent auf Rechtskonformität geprüft. Die Händlerbund Management AG garantiert für die Rechtssicherheit der Texte und haftet im Falle von Abmahnungen. Nähere Informationen dazu finden Sie unter: <a href="https://www.haendlerbund.de/de/leistungen/rechtssicherheit/agb-service" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.haendlerbund.de/de/leistungen/rechtssicherheit/agb-service</a>.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AGBPage;
