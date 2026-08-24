@@ -1,0 +1,300 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { Shield } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const PrivacyPage_EN = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="en" />
+        <title>Data protection declaration - SMARTDOCK</title>
+        <meta name="description" content="Data protection declaration and information on data processing at SMARTDOCK." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Breadcrumb */}
+        <Breadcrumb 
+          items={[
+            { label: 'Home', path: '/en' },
+            { label: 'Privacy Policy', path: '/en/privacy' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <Shield className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Data protection declaration
+          </h1>
+        </motion.div>
+
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-12"
+        >
+
+          <section>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Unless stated otherwise below, the provision of your personal data is neither legally nor contractually obligatory, nor required for conclusion of a contract. You are not obliged to provide your data. Not providing it will have no consequences. This only applies as long as the processing procedures below do not state otherwise.
+              </p>
+              <p>
+                “Personal data” is any information relating to an identified or identifiable natural person.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Server log files</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                You can use our websites without submitting personal data.
+              </p>
+              <p>
+                Every time our website is accessed, user data is transferred to us or our web hosts/IT service providers by your internet browser and stored in server log files. This stored data includes for example the name of the site called up, date and time of the request, the IP address, amount of data transferred and the provider making the request. The processing is carried out on the basis of Article 6(1) f) GDPR due to our legitimate interests in ensuring the smooth operation of our website as well as improving our services.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Contact</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Responsible person</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Contact us at any time. The person responsible for data processing is: Dipl.-Ing. Karsten Dreyer, Finkenweg 9-15, 24340 Eckernförde Deutschland, <a href="tel:04351767440" className="text-primary hover:underline">04351767440</a>, <a href="mailto:datenschutz@thitronik.de" className="text-primary hover:underline">datenschutz@thitronik.de</a>
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Proactive contact of the customer by e-mail</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                If you make contact with us proactively via email, we shall collect your personal data (name, email address, message text) only to the extent provided by you. The purpose of the data processing is to handle and respond to your contact request.
+              </p>
+              <p>
+                If the initial contact serves to implement pre-contractual measures (e.g. consultation in the case of purchase interest, order creation) or concerns an agreement already concluded between you and us, this data processing takes place on the basis of Article 6(1)(b) GDPR.
+              </p>
+              <p>
+                If the initial contact occurs for other reasons, this data processing takes place on the basis of Article 6(1)(f) GDPR for the purposes of our overriding, legitimate interest in handling and responding to your request. <strong className="text-foreground font-semibold">In this case, on grounds relating to your particular situation, you have the right to object at any time to this processing of personal data concerning you and carried out on the basis of Article 6(1)(f) GDPR.</strong>
+              </p>
+              <p>
+                We will only use your email address to process your request. Your data will subsequently be deleted in compliance with statutory retention periods, unless you have agreed to further processing and use.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Orders</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Collection, processing, and transfer of personal data in orders</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                When you submit an order we only collect and use your personal data insofar as this is necessary for the fulfilment and handling of your order as well as processing of your queries. The provision of data is necessary for conclusion of a contract. Failure to provide it will prevent the conclusion of any contract. The processing will occur on the basis of Article 6(1) b) GDPR and is required for the fulfilment of a contract with you.
+              </p>
+              <p>
+                Your data will be shared, for example, with shipping companies, dropshipping or fulfillment providers, payment service providers, service providers for order processing, and IT service providers. We will comply strictly with legal requirements in every case. The scope of data transmission is restricted to a minimum.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Advertising</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Use of the e-mail address for sending newsletters</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                We use your e-mail address to send you information and offers by newsletter, provided you have expressly consented to this. The data processing serves the sole purpose of advertising. For this purpose, we process your e-mail address and any other data that you have voluntarily provided when registering for our newsletter.
+              </p>
+              <p>
+                The processing is carried out on the basis of Art. 6 para. 1 lit. a GDPR with your consent. You can withdraw your consent at any time without affecting the lawfulness of processing based on consent before its withdrawal. You can unsubscribe from the newsletter at any time by using the corresponding link in the newsletter or by sending us a message. Your e-mail address will then be removed from the mailing list. Despite removal from the mailing list, we may continue to store your email address in a blacklist to prevent you from receiving future newsletter emails from us. This storage takes place on the basis of Art. 6 para. 1 lit. f GDPR out of our and your legitimate interest in preventing the reuse of your e-mail address for sending our newsletter. <strong className="text-foreground font-semibold">You have the right to object to this processing of your personal data at any time on grounds relating to your particular situation.</strong>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Cookies</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Our website uses cookies. Cookies are small text files which are saved in a user’s internet browser or by the user’s internet browser on their computer system. When a user calls up a website, a cookie may be saved on the user’s operating system. This cookie contains a characteristic character string which allows the browser to be clearly identified when the website is called up again.
+              </p>
+              <p>
+                Cookies will be stored on your computer. You therefore have full control over the use of cookies. By choosing corresponding technical settings in your internet browser, you can be notified before the setting of cookies and you can decide whether to accept this setting in each individual case as well as prevent the storage of cookies and transmission of the data they contain. Cookies which have already been saved may be deleted at any time. We would, however, like to point out that this may prevent you from making full use of all the functions of this website.
+              </p>
+              <p>
+                Using the links below, you can find out how to manage cookies (or deactivate them, among other things) in major browsers:
+              </p>
+              <div className="space-y-2">
+                <p className="break-words">Chrome Browser: <a href="https://support.google.com/accounts/answer/61416?hl=en" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.google.com/accounts/answer/61416?hl=en</a></p>
+                <p className="break-words">Microsoft Edge: <a href="https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-löschen-63947406-40ac-c3b8-57b9-2a946a29ae09</a></p>
+                <p className="break-words">Mozilla Firefox: <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences</a></p>
+                <p className="break-words">Safari: <a href="https://support.apple.com/de-de/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://support.apple.com/de-de/guide/safari/manage-cookies-and-website-data-sfri11471/mac</a></p>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">technically necessary cookies</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Insofar as no other information is given in the data protection declaration below we use only these technically necessary cookies to make our offering more user-friendly, effective and secure. Cookies also allow our systems to recognise your browser after a page change and to offer you services. Some functions of our website cannot be offered without the use of cookies. These services require the browser to be recognised again after a page change.
+              </p>
+              <p>
+                The use of cookies or comparable technologies is carried out on the basis of Art. 25 para. 2 TDDDG. Processing is carried out on the basis of art. 6 (1) lit. f GDPR due to our largely justified interest in ensuring the optimal functionality of the website as well as a user-friendly and effective design of our range of services.
+              </p>
+              <p>
+                <strong className="text-foreground font-semibold">You have the right to veto this processing of your personal data according to art. 6 (1) lit. f GDPR, for reasons relating to your personal situation.</strong>
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Use of CookieBot</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                On our website, we use the consent management tool Cookiebot from Cybot A/S, Havnegade 39, 1058 Copenhagen, Denmark; "Cookiebot").
+              </p>
+              <p>
+                The tool enables you to give your consent to data processing via the website, in particular to set cookies, as well as to make use of your right of revocation for consents already given. The data processing serves the purpose of obtaining and documenting necessary consents to data processing and thus to comply with legal obligations. Cookies may be deployed for this purpose. The following information may be collected and transmitted to Cookiebot: anonymous IP address, date and time of consent, URL from which consent was sent, anonymous, random, encrypted key, consent status. This data will not be passed on to any other third parties.
+              </p>
+              <p>
+                The data processing is carried out on the basis of Article 6(1)(c) GDPR to comply with a legal obligation.
+              </p>
+              <p className="break-words">
+                For more information about Cookiebot’s privacy policy, please visit: <a href="https://www.cookiebot.com/de/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.cookiebot.com/de/privacy-policy/</a>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Analysis</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Use of Google Analytics 4</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                We use the Google Analytics web analytics service provided by Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Ireland; "Google") on our website.
+              </p>
+              <p>
+                The data processing serves the purpose of analyzing this website and its visitors as well as for marketing and advertising purposes. To this end, Google will use the information obtained on behalf of the operator of this website for the purpose of evaluating your use of the website, compiling reports on website activity and providing other services relating to website activity and internet usage to the website operator.
+              </p>
+              <p>
+                In this context, the following information may be collected, among others: IP address, date and time of page view, click path, information about the browser you are using and the device you are using (device), pages visited, referrer URL (website from which you accessed our website), location data, purchase activity. Your data may be linked by Google to other data, such as your search history, your personal accounts, your usage data from other devices, and any other data Google may have about you.
+              </p>
+              <p>
+                The IP address is shortened beforehand by Google within member states of the European Union or in other contracting states of the Agreement on the European Economic Area.
+              </p>
+              <p>
+                Google uses technologies such as cookies, web storage in the browser and tracking pixels that enable an analysis of your use of the website. The use of cookies or similar technologies takes place with your consent on the basis of § 25 para. 1 p. 1 TDDDG in conjunction with. Art. 6 para. 1 lit. a DSGVO.
+              </p>
+              <p>
+                The processing of your personal data is carried out with your consent on the basis of Art. 6 para. 1 lit. a DSGVO. You may revoke your consent at any time without affecting the lawfulness of the processing carried out on the basis of the consent until revocation.
+              </p>
+              <p>
+                We use the extended implementation of the consent mode (Advanced Consent Mode). In this case, user data is transmitted to Google in the form of "pings" even if consent has not been granted. These pings may contain the following information, among others: IP address to derive the IP country (the IP address is not logged), date and time of the page view, URL of the pages visited, user agent, referrer URL (website from which you accessed our website) or information about the triggering of website events such as a conversion. On the basis of this information, Google models user data in order to be able to carry out a comprehensive usage analysis despite the refusal of consent.
+              </p>
+              <p>
+                The information generated by this about your use of this website is usually transferred to a Google server in the USA and stored there. For the USA, there is an adequacy decision of the EU Commission, the Trans-Atlantic Data Privacy Framework (TADPF). Google has certified itself in accordance with the TADPF and has thus undertaken to comply with European data protection principles.
+              </p>
+              <p>
+                Both Google and US government agencies have access to your data.
+              </p>
+              <p className="break-words">
+                For more information on terms of use and data protection, please visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://policies.google.com/technologies/partner-sites</a> and <a href="https://policies.google.com/privacy?hl=de&amp;gl=de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://policies.google.com/privacy?hl=de&amp;gl=de</a> and <a href="https://business.safety.google/privacy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://business.safety.google/privacy/</a>.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Plug-ins</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Use of the Google Tag Manager</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p className="break-words">
+                Our website uses the Google Tag Manager from Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Ireland; "Google"). This application manages JavaScript tags and HTML tags which are used in particular to implement tracking and analysis tools. The data processing serves to facilitate the needs-based design and optimisation of our website. The Google Tag Manager itself neither stores cookies nor processes personal data. It does, however, enable the triggering of further tags which may collect and process personal data. You can find more detailed information on the terms and conditions of use and data protection at <a href="https://www.google.com/intl/de/tagmanager/use-policy.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.google.com/intl/de/tagmanager/use-policy.html</a>
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Use of Cloudfront</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Our website uses the Cloudfront CDN content delivery network provided by Amazon Web Services EMEA SARL (38 avenue John F. Kennedy, L-1855, Luxembourg; "Cloudfront").
+              </p>
+              <p>
+                This is a supra-regional network of servers in various data centers to which our web server connects and through which certain content on our website is delivered.
+              </p>
+              <p>
+                The data processing serves the purpose of optimizing the loading times of our website and thus making our offer more user-friendly.
+              </p>
+              <p>
+                The following information, among others, may be collected: IP address, system configuration information, information about traffic to and from customer websites (so-called server log files).
+              </p>
+              <p>
+                Your data may be transmitted to the USA. For the USA, there is an adequacy decision of the EU Commission, the Trans-Atlantic Data Privacy Framework (TADPF). Cloudfront has certified itself in accordance with the TADPF and has thus undertaken to comply with European data protection principles.
+              </p>
+              <p>
+                Processing is carried out on the basis of Article 6(1)(f) GDPR for the purposes of our legitimate interest in needs-based and targeted design of the website. <strong className="text-foreground font-semibold">On grounds relating to your particular situation, you have the right to object at any time to this processing of your personal data and carried out on the basis of Article 6(1)(f) GDPR.</strong>
+              </p>
+              <p className="break-words">
+                For more information on data protection when using Cloudfront, please visit <a href="https://docs.aws.amazon.com/de_de/AmazonCloudFront/latest/DeveloperGuide/data-protection-summary.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://docs.aws.amazon.com/de_de/AmazonCloudFront/latest/DeveloperGuide/data-protection-summary.html</a> and <a href="https://d1.awsstatic.com/legal/aws-gdpr/AWS_GDPR_DPA.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://d1.awsstatic.com/legal/aws-gdpr/AWS_GDPR_DPA.pdf</a>.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Rights of persons affected and storage duration</h2>
+
+            <h3 className="text-xl font-semibold mb-3 mt-6 text-foreground">Duration of storage</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                After contractual processing has been completed, the data is initially stored for the duration of the warranty period, then in accordance with the retention periods prescribed by law, especially tax and commercial law, and then deleted after the period has elapsed, unless you have agreed to further processing and use.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Rights of the affected person</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                If the legal requirements are fulfilled, you have the following rights according to art. 15 to 20 GDPR: Right to information, correction, deletion, restriction of processing, data portability. You also have a right of objection against processing based on art. 6 (1) GDPR, and to processing for the purposes of direct marketing, according to art. 21 (1) GDPR.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Right to complain to the regulatory authority</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                You have the right to complain to the regulatory authority according to art. 77 GDPR if you believe that your data is not being processed legally.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-3 mt-8 text-foreground">Right to object</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                If the data processing outlined here is based on our legitimate interests in accordance with Article 6(1)f) GDPR, you have the right for reasons arising from your particular situation to object at any time to the processing of your data with future effect.
+              </p>
+              <p>
+                If the objection is successful, we will no longer process the personal data, unless we can demonstrate compelling legitimate grounds for the processing that outweigh your interests or rights and freedoms, or the processing is intended for the assertion, exercise or defence of legal claims.
+              </p>
+            </div>
+          </section>
+
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default PrivacyPage_EN;
