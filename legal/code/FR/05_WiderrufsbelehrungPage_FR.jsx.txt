@@ -1,0 +1,320 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { 
+  RefreshCcw, 
+  AlertCircle, 
+  Clock, 
+  DollarSign, 
+  XCircle, 
+  FileText,
+  Printer
+} from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion.jsx";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card.jsx";
+import { Button } from "@/components/ui/button.jsx";
+import { Input } from "@/components/ui/input.jsx";
+import { Textarea } from "@/components/ui/textarea.jsx";
+import { Label } from "@/components/ui/label.jsx";
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const WiderrufsbelehrungPage_FR = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20 print:pt-0 print:bg-white">
+      <Helmet>
+        <html lang="fr" />
+        <title>{`Droit de rétractation - SMARTDOCK`}</title>
+        <meta name="description" content="Droit de rétractation pour la vente de biens et modèle de formulaire de révocation de Thitronik GmbH." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 print:px-0 print:max-w-none">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Accueil', path: '/fr' },
+            { label: 'Droit de rétractation', path: '/fr/droit-de-retractation' }
+          ]} 
+          className="mb-4 print:hidden"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 mt-8 print:mb-6"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6 print:hidden">
+            <RefreshCcw className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground print:text-black" style={{ letterSpacing: '-0.02em' }}>
+            Droit de rétractation pour la vente de biens
+          </h1>
+        </motion.div>
+
+        <div className="space-y-8 print:space-y-4">
+
+          {/* Droit de révocation pour le consommateur */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Card className="border border-border shadow-sm print:border-black print:shadow-none">
+              <CardContent className="p-6 md:p-10 print:p-0">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                    <AlertCircle className="w-5 h-5" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-foreground tracking-tight print:text-black">
+                    Droit de révocation pour le consommateur
+                  </h2>
+                </div>
+                <p className="text-muted-foreground leading-relaxed print:text-black">
+                  (un consommateur est une personne physique, qui effectue une transaction dans un but qui n'est ni commercial, ni dans le cadre de son activité professionnelle indépendante).
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Droit de rétractation */}
+          <div className="bg-card border border-border rounded-3xl p-6 md:p-10 shadow-sm print:border-none print:shadow-none print:p-0">
+            <h2 className="text-3xl font-bold text-foreground tracking-tight mb-8 print:text-black">
+              Droit de rétractation
+            </h2>
+
+            <Accordion type="multiple" defaultValue={["item-1", "item-2", "item-3"]} className="w-full space-y-4">
+              
+              {/* Droit de rétractation */}
+              <AccordionItem value="item-1" className="border border-border rounded-xl px-6 bg-background/50 data-[state=open]:bg-background transition-colors print:border-none print:px-0">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                      <Clock className="w-5 h-5" />
+                    </div>
+                    <span className="text-xl font-semibold">Droit de rétractation</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 print:text-black">
+                  <p className="mb-4">
+                    Vous disposez d'un délai d'un mois pour exercer son droit de rétractation sans avoir à justifier de motifs.
+                  </p>
+                  <p className="mb-4">
+                    Le délai de rétractation est d'un mois à partir du jour,
+                  </p>
+                  <ul className="space-y-3 mb-4 pl-1">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>après la date à laquelle vous, ou un tiers désigné par vous, autre que le transporteur, prenez ou prend physiquement possession des articles ou, dans le cas d'une commande unique portant sur un ou plusieurs articles et si ce ou ces derniers est ou sont livrés uniformément;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>après la date à laquelle vous, ou un tiers désigné par vous, autre que le transporteur, prenez ou prend physiquement possession du dernier article ou, dans le cas d'une commande unique portant sur plusieurs articles et si ces derniers sont livrés séparément;</span>
+                    </li>
+                  </ul>
+                  <p className="mb-4">
+                    Pour exercer votre droit de rétractation, vous devez (Thitronik GmbH, Finkenweg 11-15, 24340 Eckernförde, Numéro de téléphone: +494351767440, E-Mail: smartdock@thitronik.de) nous informer de votre décision de vous rétracter du présent contrat au moyen d'une déclaration dénuée de toute ambiguïté (par exemple, une lettre envoyée par la poste ou un courrier électronique). A cet effet, vous pouvez utiliser le modèle de formulaire de rétractation ci-joint, qui n'est toutefois pas obligatoire.
+                  </p>
+                  <p>
+                    Pour la préservation du délai de révocation suffit si la notification relative à l'exercice du droit de rétractation est transmise par le consommateur avant l'expiration dudit délai.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Conséquences de la révocation */}
+              <AccordionItem value="item-2" className="border border-border rounded-xl px-6 bg-background/50 data-[state=open]:bg-background transition-colors print:border-none print:px-0">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                      <DollarSign className="w-5 h-5" />
+                    </div>
+                    <span className="text-xl font-semibold">Conséquences de la révocation</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 print:text-black">
+                  <p className="mb-4">
+                    Si vous révoquez le présent contrat, nous vous rembourserons tous les paiements que nous avons encaissés, y compris les frais de livraison (à l'exception des frais supplémentaires découlant d'un autre mode de livraison que la livraison standard plus économique que nous proposons) sans délai au plus tard dans un délai de 14 jours à compter du jour où nous avons reçu la notification relative à la révocation du présent contrat. Pour le remboursement, nous utilisons le même moyen de paiement que vous avez utilisé pour votre transaction sauf stipulation expresse contraire convenue avec vous ; en aucun cas, nous ne facturerons pas de suppléments pour le remboursement des sommes.
+                  </p>
+                  <p className="mb-4">
+                    Nous pouvons refuser le remboursement jusqu'à ce que nous ayons récupéré les articles ou jusqu'à ce que vous ayez apporté la preuve que vous avez renvoyé les articles en fonction du délai le plus proche.
+                  </p>
+                  <p className="mb-4">
+                    Vous devez nous ou à Thitronik GmbH, Finkenweg 9-15, 24340 Eckernförde renvoyer ou céder les articles sans délai et en tous les cas au plus tard dans un délai de 2 semaines à partir du jour où vous nous avez informés de la révocation du présent contrat. Le délai est respecté si vous renvoyez les articles avant l'expiration du délai de 2 semaines.
+                  </p>
+                  <p className="mb-4">
+                    Vous prenez en charge les coûts directs de retour des marchandises.
+                  </p>
+                  <p>
+                    Votre responsabilité n'est engagée qu'à l'égard de la dépréciation de biens résultant de manipulations autres que celles nécessaires pour s'assurer de la qualité, de la nature et du bon fonctionnement de ces biens.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* Motifs d'exclusion ou d'extinction */}
+              <AccordionItem value="item-3" className="border border-border rounded-xl px-6 bg-background/50 data-[state=open]:bg-background transition-colors print:border-none print:px-0">
+                <AccordionTrigger className="hover:no-underline py-6">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary shrink-0 print:hidden">
+                      <XCircle className="w-5 h-5" />
+                    </div>
+                    <span className="text-xl font-semibold">Motifs d'exclusion ou d'extinction</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 print:text-black">
+                  <p className="mb-4">Le droit de révocation n'existe pas pour les contrats</p>
+                  <ul className="space-y-3 mb-6 pl-1">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>de livraison des marchandises qui ne sont pas produites au préalable et pour lesquelles un choix ou une sélection par le consommateur est déterminant pour leur production ou qui sont clairement adaptées aux besoins spécifiques du consommateur;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>de livraison des marchandises qui peuvent rapidement s'abîmer ou dont la date de péremption serait rapidement dépassée;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>de livraison de boissons alcoolisées dont le prix a été convenu lors de la conclusion du contrat, mais qui peuvent être livrées au plus tôt 30 jours après la conclusion du contrat et dont la valeur actuelle dépend des variations du marché sur lesquelles l'entrepreneur n'a aucune emprise;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>de livraison des journaux, périodiques ou magazines excepté les contrats d'abonnement.</span>
+                    </li>
+                  </ul>
+
+                  <p className="mb-4">Le droit de révocation s'éteint de manière anticipée pour les contrats</p>
+                  <ul className="space-y-3 pl-1">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>de livraison de marchandises scellées qui ne peuvent pas être retournées pour des raisons de protection de la santé ou des raisons hygiéniques si leur fermeture a été retirée après la livraison;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>de livraison des marchandises si celles-ci ont été mélangées de manière indivisible à d'autres biens après leur livraison en raison de leur nature;</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0 print:bg-black"></div>
+                      <span>de livraison des enregistrements vocaux ou vidéo ou de logiciel d'ordinateur dans un emballage scellé si la fermeture a été retirée après la livraison.</span>
+                    </li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+            </Accordion>
+          </div>
+
+          {/* Modèle de formulaire de révocation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="pt-8 print:pt-4 print:break-inside-avoid"
+          >
+            <Card className="border-2 border-border shadow-lg print:border-black print:shadow-none">
+              <CardHeader className="bg-muted/30 border-b border-border pb-8 print:bg-transparent print:border-black">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-primary text-primary-foreground rounded-xl shadow-sm print:hidden">
+                      <FileText className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl">Modèle de formulaire de révocation</CardTitle>
+                      <CardDescription className="text-base mt-2">
+                        (si vous souhaitez révoquer le contrat, veuillez remplir ce formulaire et nous le renvoyer.)
+                      </CardDescription>
+                    </div>
+                  </div>
+                  <Button variant="outline" onClick={handlePrint} className="hidden md:flex gap-2 print:hidden">
+                    <Printer className="w-4 h-4" />
+                    Imprimer
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent className="p-6 md:p-10">
+                <div className="max-w-3xl space-y-8">
+                  
+                  {/* Recipient Info */}
+                  <div className="p-6 bg-muted/40 rounded-xl border border-border print:border-none print:p-0 print:bg-transparent">
+                    <p className="leading-relaxed">
+                      À Thitronik GmbH, Finkenweg 11-15, 24340 Eckernförde, Adresse e-mail: smartdock@thitronik.de :
+                    </p>
+                  </div>
+
+                  <div className="text-lg font-medium leading-relaxed">
+                    Par la présente, je/nous révoque(ons) le contrat que j'ai / nous avons conclu pour l'achat des marchandises ci-après (*)/ La fourniture de la prestation suivante (*)
+                  </div>
+
+                  {/* Form Fields (Visual Template) */}
+                  <div className="space-y-6">
+                    <div className="space-y-3">
+                      <Textarea 
+                        id="goods" 
+                        className="min-h-[120px] resize-none print:border-black"
+                      />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label htmlFor="orderDate" className="text-base">Commandé le (*)/ Reçu le (*)</Label>
+                      <Input id="orderDate" className="print:border-black" />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label htmlFor="consumerName" className="text-base">Nom du/des consommateur(s)</Label>
+                      <Input id="consumerName" className="print:border-black" />
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label htmlFor="consumerAddress" className="text-base">Adresse du/des consommateur(s)</Label>
+                      <Input id="consumerAddress" className="print:border-black" />
+                    </div>
+
+                    <div className="pt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <div className="h-12 border-b-2 border-dashed border-muted-foreground/50 print:border-black"></div>
+                        <Label className="text-sm text-muted-foreground">Signature du/des consommateur(s) (seulement pour un message sur papier)</Label>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="h-12 border-b-2 border-dashed border-muted-foreground/50 print:border-black"></div>
+                        <Label className="text-sm text-muted-foreground">Date</Label>
+                      </div>
+                    </div>
+
+                    <p className="text-sm text-muted-foreground pt-4 border-t border-border print:border-black">
+                      (*) Barrer les mentions inutiles
+                    </p>
+                  </div>
+
+                  <div className="pt-6 print:hidden">
+                    <Button onClick={handlePrint} className="w-full md:w-auto gap-2">
+                      <Printer className="w-4 h-4" />
+                      Imprimer le formulaire
+                    </Button>
+                  </div>
+
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WiderrufsbelehrungPage_FR;
