@@ -1,0 +1,285 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { FileText, Scale, Info } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb.jsx';
+import { useLanguageRouting } from '@/hooks/useLanguageRouting.js';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration.js';
+
+const AGBPage_EN = () => {
+  useLanguageRouting();
+
+  useScrollRestoration();
+
+  return (
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <Helmet>
+        <html lang="en" />
+        <title>Standard Business Terms and customer information - SMARTDOCK</title>
+        <meta name="description" content="Standard business terms and customer information of Thitronik GmbH for SMARTDOCK." />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Breadcrumb - Standardized position & margin */}
+        <Breadcrumb 
+          items={[
+            { label: 'Home', path: '/en' },
+            { label: 'Terms & Conditions', path: '/en/terms' }
+          ]} 
+          className="mb-4"
+        />
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 mt-8"
+        >
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-6">
+            <FileText className="w-6 h-6" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground" style={{ letterSpacing: '-0.02em' }}>
+            Standard Business Terms and customer information
+          </h1>
+        </motion.div>
+
+        <div className="space-y-12">
+          {/* PART I - Standard business terms */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-10"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6">
+              <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                <Scale className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                I. Standard business terms
+              </h2>
+            </div>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 1 Basic provisions</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) The following business terms are applicable to all the contracts, which you conclude with us as a supplier (Thitronik GmbH) via the <a href="https://www.smartdock.de" className="text-primary hover:underline">www.smartdock.de</a> website. Unless otherwise agreed upon, the inclusion, if necessary, of your own conditions is ruled out.
+                </p>
+                <p>
+                  (2) A ‘consumer’ in the sense of the following regulations is every natural person who concludes a legal transaction which, to an overwhelming extent, cannot be attributed to either his commercial or independent professional activities. The term ‘businessman’ refers to every natural person, legal person or legally responsible partnership that concludes a legal transaction in pursuance of his/its independent professional or commercial activity.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 2 Conclusion of the contract</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) The subject-matter of the contract is the selling of products.
+                </p>
+                <p>
+                  Our offers on the website are non-binding and are not a binding offer to conclude a contract.
+                </p>
+                <p>
+                  (2) You can make a binding purchase offer (order) via the online shopping cart system.
+                </p>
+                <p>
+                  In doing so, the goods intended for purchase are stored in the "shopping cart". You can use the corresponding button in the navigation bar to call up the "shopping cart" and make changes there at any time. After clicking the button "Checkout" or "Proceed to order" (or similar designation) and entering the personal data as well as the payment and shipping terms, the order data will finally be displayed to you as an order overview.
+                </p>
+                <p>
+                  Before submitting the order, you have the option once more to review or change (you may also use the "Back" button on your web browser) any information on the order summary page, or to cancel the purchase.
+                </p>
+                <p>
+                  By sending the order via the corresponding button ("order with obligation to pay", "buy" / "buy now", "order with obligation to pay" or similar designation) you submit a binding offer to us.
+                </p>
+                <p>
+                  You then receive an automatically-generated email regarding the receipt of your order. This email does not yet lead to the conclusion of a contract.
+                </p>
+                <p>
+                  (3) The acceptance of the offer (and with it, the conclusion of the contract) takes place within a period of 2 days via a textual confirmation (e.g. email) in which you receive confirmation (order acknowledgement) regarding the execution of the order or the delivery of the products in question.
+                </p>
+                <p>
+                  If you have not received any corresponding message within this deadline, you are no longer considered to be bound to your order. Under such circumstances, any services that have already been provided are restored without undue delay.
+                </p>
+                <p>
+                  (4) You are not bound by your enquiries regarding the creation of an offer that have been conveyed to us. We supply you with a textual and binding offer (e.g. via e-mail), which you can accept within a period of 5 days.
+                </p>
+                <p>
+                  (5) The execution of the order and the sending of all the details necessitated by the conclusion of the contract take place via e-mail, in a partially-automated manner. Consequently, you have to ensure that the e-mail address that you have deposited with us is the correct one, and that the receipt of the respective e-mails is guaranteed. In particular, you have to ensure that the respective e-mails are not blocked by a SPAM filter.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 3 Right of retention, reservation of proprietary rights</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) You can only exercise a right of retention if the situation in question involves claims arising from the same contractual relationship.
+                </p>
+                <p>
+                  (2) The goods remain our property until the purchase price is paid in full.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 4 Warranty</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) The statutory warranty rights are applicable.
+                </p>
+                <p>
+                  (2) As a consumer, you are requested to promptly check the product for completeness, visible defects and transport damage as soon as it is delivered, and promptly disclose your complaints to us and the shipping company in writing. Even if you do not comply with this request, it shall have no effect on your legal warranty claims.
+                </p>
+                <p>
+                  (3) If a characteristic of the goods deviates from the objective requirements, the deviation shall only be deemed to be agreed if you were informed of the same by us before submitting the contractual declaration and the deviation was expressly and separately agreed between the contracting parties.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">§ 5 Choice of law, place of fulfilment, jurisdiction</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  (1) German law shall apply. This choice of law only applies to customers if it does not result in the revocation of the protection guaranteed by the mandatory provisions of the law of the country in which the respective customer’s usual place of residence is located (benefit-of-the-doubt principle).
+                </p>
+                <p>
+                  (2) If you are not a consumer, but a businessman, a legal entity under public law or an institutional fund governed by public law, our place of business is the place of jurisdiction as well as the place of fulfilment for all services that follow from the business relationships that exist with us. The same condition applies to situations in which you are not associated with a general place of jurisdiction in Germany or the EU, as well as situations in which the place of residence or the usual place of residence is not known at the time of commencement of proceedings. This has no bearing on the capacity to call upon the court associated with another place of jurisdiction.
+                </p>
+                <p>
+                  (3) The provisions of the UN Convention on Contracts for the International Sale of Goods are explicitly inapplicable.
+                </p>
+              </div>
+            </section>
+          </motion.div>
+
+          {/* PART II - Customer information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm space-y-10"
+          >
+            <div className="flex items-center space-x-4 border-b border-border pb-6">
+              <div className="p-3 bg-secondary/20 rounded-lg text-secondary-foreground">
+                <Info className="w-6 h-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">
+                II. Customer information
+              </h2>
+            </div>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">1. Identity of the seller</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="space-y-1">
+                  <p className="font-medium text-foreground">Thitronik GmbH</p>
+                  <p>Finkenweg 11-15</p>
+                  <p>24340 Eckernförde</p>
+                  <p>Germany</p>
+                </div>
+                <div className="space-y-1">
+                  <p>Telephone: <a href="tel:04351767440" className="text-primary hover:underline">04351767440</a></p>
+                  <p>E-Mail: <a href="mailto:smartdock@thitronik.de" className="text-primary hover:underline">smartdock@thitronik.de</a></p>
+                </div>
+                <p>
+                  We are neither willing nor obliged to participate in dispute resolution proceedings before consumer arbitration boards.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">2. Information regarding the conclusion of the contract</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  The technical steps associated with the conclusion of the contract, the contract conclusion itself and the correction options are executed in accordance to the regulations "conclusion of the contract" in our standard business terms (part I.).
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">3. Contractual language, saving the text of the contract</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  3.1 Contract language shall be English.
+                </p>
+                <p>
+                  3.2 The complete text of the contract is not saved with us. Before the order is sent, via the online - shopping cart system the contract data can be printed out or electronically saved using the browser’s print function. After the order is received by us, the order data, the legally-mandated details related to distance selling contracts and the standard business terms are re-sent to you via e-mail.
+                </p>
+                <p>
+                  3.3 You will be sent all contractual information within the framework of a binding offer in written form, via E-mail for example, for quotation requests outside of the online shopping basket system, which can be printed out or saved electronically in a secure manner.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">4. Main features of the product or service</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  The key features of the goods and/or services can be found in the respective quote.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">5. Prices and payment arrangements</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  5.1 The prices mentioned in the respective offers represent total prices, as do the shipping costs. They include all the price components, including all the incidental taxes.
+                </p>
+                <p>
+                  5.2 There are no shipping costs.
+                </p>
+                <p>
+                  5.3 If delivery is made to countries outside of the European Union, we may incur unreasonable additional costs, such as duties, taxes or money transfer fees (transfer or foreign exchange fees charged by the banks), which you must bear.
+                </p>
+                <p>
+                  5.4 You must also bear the costs arising from money transfers in cases in which the delivery is made to an EU Member State, but the payment is initiated outside of the European Union.
+                </p>
+                <p>
+                  5.5 The payment methods that are available to you are shown by clicking the appropriate button on our website or are disclosed in the respective quote.
+                </p>
+                <p>
+                  5.6 Unless otherwise specified for the respective payment methods, the payment claims arising from the contract that has been concluded become payable immediately.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">6. Delivery conditions</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  6.1 The delivery conditions, delivery date and existing supply restrictions, if applicable, can be found by clicking the appropriate button on our website or in the respective quote.
+                </p>
+                <p>
+                  6.2 If you are a consumer, the following is statutorily regulated: The risk of the sold item accidentally being destroyed or degraded during shipping only passes over to you when the item in question is delivered, regardless of whether or not the shipping operation is insured. This condition does not apply if you have independently commissioned a transport company that has not been specified by us or a person who has otherwise been appointed to execute the shipping operation.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">7. Statutory warranty right</h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Liability for defects is governed by the “Warranty” provisions in our General Terms and Conditions of Business (Part I).
+                </p>
+              </div>
+            </section>
+
+            <div className="pt-6 border-t border-border">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                These SBTs and customer details were created by the lawyers specialising in IT law who work for the Händlerbund, and are constantly checked for legal conformity. Händlerbund Management AG guarantees the legal security of the texts and assumes liability in case warnings are issued. More detailed information can be found on the following website: <a href="https://www.haendlerbund.de/de/leistungen/rechtssicherheit/agb-service" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.haendlerbund.de/de/leistungen/rechtssicherheit/agb-service</a>.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AGBPage_EN;
