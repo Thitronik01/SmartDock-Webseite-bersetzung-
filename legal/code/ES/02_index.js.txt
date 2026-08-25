@@ -1,0 +1,16 @@
+
+import { translation_DE } from './translation_DE.js';
+import { translation_EN } from './translation_EN.js';
+import { translation_FR } from './translation_FR.js';
+import { translation_NL } from './translation_NL.js';
+import { translation_ES } from './translation_ES.js';
+
+export const translations = {
+  DE: translation_DE,
+  EN: translation_EN,
+  FR: translation_FR,
+  NL: translation_NL,
+  ES: translation_ES
+};
+
+export const getAvailableLanguages = () => Object.keys(translations);
